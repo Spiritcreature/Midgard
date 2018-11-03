@@ -1,0 +1,30 @@
+body{
+	background-image: url(../img/wood-planks-wood-wood-texture.jpg);
+	color: #8F6E1A;
+}
+
+header{
+	margin-top: 20px;
+}
+
+section{
+	min-height: 700px;
+	padding-top: 20px;
+	margin-bottom: 20px;
+	background-color: #000000;
+}
+
+
+.navbar-inverse{
+	background-color: #000000;
+}
+
+.navbar-brand{
+	width: 90px;
+	height:90px;
+}
+
+footer{
+	color:#FFFFFF;
+}
+
