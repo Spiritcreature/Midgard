@@ -1,7 +1,7 @@
 <?php
 session_start();
-require('controller/frontendController.php');
-require('controller/backendController.php');
+require('controller/frontend.php');
+
 
 if (isset($_GET['action']) && !empty($_GET['action']))
 	{
@@ -18,7 +18,7 @@ if (isset($_GET['action']) && !empty($_GET['action']))
 	}
 	else
 	{
-		require ('index.php');
+		welcome();
 	}
 
 

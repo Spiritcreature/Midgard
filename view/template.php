@@ -26,7 +26,7 @@
     <![endif]-->
 	
 	<!--My CSS-->
-	<link rel="stylesheet" href="../public/css/style.css" />
+	<link rel="stylesheet" href="public/css/style.css" />
 	  
 	<link rel="shortcut icon" href="yggdrasil.jpg"/>
 
@@ -36,7 +36,7 @@
 	  <div class="container">
 		  <header>
 			  <nav class="navbar navbar-inverse">
-				  <a href="#"><img class="navbar-brand" src="../public/img/yggdrasil.jpg" alt="Logo du bar Midgard"></a>
+				  <a href="#"><img class="navbar-brand" src="public/img/yggdrasil.jpg" alt="Logo du bar Midgard"></a>
 				  <div class="container-fluid">
 					  <div class="navbar-header">
 						  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
@@ -58,18 +58,8 @@
 				  </div>
 			  </nav>
 		  </header>
-		  <section class="row">
-				<div class="col-lg-12">
-				  <p>
-					Je suis passionné par les <strong>tigres</strong> depuis très longtemps. Ce site a été construit en <em>   hommage à ces merveilleux félins...</em><br>
-					Je fais partie de la <abbr title="Société des Amoureux des Tigres">SAT</abbr> qui a pour but de faire connaître ces splendides animaux. 
-				  </p>
-				  <p>Voici ce qu'en dit le wikipedia :</p>
-				  <blockquote>
-					Le Tigre (Panthera tigris) est un mammifère carnivore de la famille des félidés (Felidae) du genre Panthera. Aisément reconnaissable à sa fourrure rousse rayée de noir, il est le plus grand félin sauvage et l'un des plus grands carnivores du monde. L'espèce est divisée en neuf sous-espèces possédant des différences mineures en termes de taille ou de comportement. Superprédateur, il chasse principalement les cerfs et les sangliers, bien qu'il puisse s'attaquer à des proies de taille plus importante comme les buffles. Jusqu'au XIXe siècle, le Tigre était réputé mangeur d'homme. La structure sociale des tigres en fait un animal solitaire ; le mâle possède un territoire qui englobe les domaines de plusieurs femelles et ne participe pas à l'éducation des petits.<br>
-					<small class="pull-right">Wikipedia</small><br>
-				  </blockquote>				
-				</div>
+		  <section>
+			  <?= $content ?>
 		  </section>
 	  </div>
 	  <footer>
