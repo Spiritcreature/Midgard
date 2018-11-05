@@ -1,0 +1,3 @@
+<?php
+
+// Chargement des classes

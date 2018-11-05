@@ -3,11 +3,22 @@ body{
 	color: #8F6E1A;
 }
 
+p{
+	text-align: justify;
+}
+
 header{
 	margin-top: 20px;
 }
 
-section{
+[class*="col"] {
+	padding: 12px 10px;
+}
+
+.admin{
+	color:#F1E20C; 
+}
+.content{
 	min-height: 700px;
 	padding-top: 20px;
 	padding-bottom: 20px;
@@ -28,6 +39,11 @@ section{
 	border: 1px solid red;
 }
 
+.img-bottle{
+	float: left;
+	height:110px;
+	margin-right: 8px;
+}
 
 footer{
 	color:#FFFFFF;

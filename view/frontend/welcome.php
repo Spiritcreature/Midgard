@@ -1,5 +1,9 @@
-<?php ob_start(); ?>
-<div class="container-fluid">
+<?php 
+	$title = "Le midgard";
+	ob_start(); 
+?>
+
+<section>
 	<div class="row">
 			<div class="col-md-offset-2 col-md-8 col-md-offset-2">
 			<p><strong>Troyes</strong> est une ville médiévale, riche d'histoire et dans un cadre unique.</p>
@@ -23,7 +27,8 @@
 			</div>
 		</div>
 	</div>
+</section>
 <?php
-
-$content = ob_get_clean();
-	require('view/template.php'); ?>
+	$content = ob_get_clean();
+	require('view/template.php');
+?>

@@ -8,7 +8,7 @@
 	<meta name="keywords" content="midgard, troyes, médiaval, bar, boissons médiévale">
 	
 	<!-- Meta Facebook-->
-	<meta property="og:title" content="Le midgard" />
+	<meta property="og:title" content="<?= $title ?>" />
 	<meta property="og:url" content="https://www.le-midgard.fr/projet5/index.php"/>
 	<meta property="og:site_name" content="Le Midgard"/>
 	<meta property="og:description" content="Le midgard est un bar à thème mediéval situé à Troyes. Ayant pour décors principal les vikings."/>
@@ -30,7 +30,7 @@
 	  
 	<link rel="shortcut icon" href="yggdrasil.jpg"/>
 
-    <title>Le Midgard</title>
+    <title><?= $title ?></title>
   </head>
   <body>
 	  <div class="container">
@@ -49,30 +49,30 @@
 					  <div class="navbar-collapse collapse">
 						  <ul class="nav navbar-nav navbar-right">
 							  <li><a href="index.php">Accueil</a></li>
-							  <li><a href="#">Boissons</a></li>
-							  <li><a href="#">Services</a></li>
-							  <li><a href="#">Reservation</a></li>
-							  <li><a href="#">Contact</a></li>
+							  <li><a href="index.php?action=drinks">Boissons</a></li>
+							  <li><a href="index.php?action=services">Services</a></li>
+							  <li><a href="index.php?action=reservations">Reservation</a></li>
+							  <li><a href="index.php?action=contact">Contact</a></li>
 						  </ul>
 					  </div>
 				  </div>
 			  </nav>
 		  </header>
-		  <section>
+		  <div class="container-fluid content">
 				  <?= $content ?>
 			  </div>
-		  </section>
+		  </div>
 	  </div>
 	  <footer>
 		  <div class="container">
 			  <div class="row down">
-				  <div class="col-xs-12 col-md-offset-2 col-md-8 text-center">© 2018 Copyright: Alexis Dizet</div>
 				  <div class="col-xs-12 col-md-1 text-center">
 					  <a class="btn-floating btn-lg btn-facebook" ><i class="fab fa-facebook"></i></a>
 				  </div>
 				  <div class="col-xs-12 col-md-1 text-center">
 					  <a class="btn-floating btn-lg btn-instagram" ><i class="fab fa-instagram"></i></a>
 				  </div>
+				  <div class="col-xs-12 col-md-8 text-center">© 2018 Copyright: Alexis Dizet - <a class="admin" href="index.php?action=auth">Administration</a></div>
 			  </div>
 	  </footer>
 
