@@ -1,6 +1,6 @@
 <?php 
 	$title = "Les services du Midgard";
-	ob_start(); 
+	ob_start();
 ?>
 <section>
 	

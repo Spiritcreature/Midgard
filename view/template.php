@@ -72,7 +72,13 @@
 				  <div class="col-xs-12 col-md-1 text-center">
 					  <a class="btn-floating btn-lg btn-instagram" ><i class="fab fa-instagram"></i></a>
 				  </div>
-				  <div class="col-xs-12 col-md-8 text-center">© 2018 Copyright: Alexis Dizet - <a class="admin" href="index.php?action=auth">Administration</a></div>
+				  <div class="col-xs-12 col-md-8 text-center">© 2018 Copyright: Alexis Dizet -
+					  <?php if (!isset($_SESSION['pseudo'])){ ?>
+					  <a class="admin" href="index.php?action=authentification">Administration</a>
+					  <?php }else{ ?>
+					  <a class="admin" href="index.php?action=logout">Déconnexion</a>
+					  <?php } ?>
+				  </div>
 			  </div>
 	  </footer>
 

@@ -8,7 +8,7 @@
 if (!isset($_SESSION['pseudo'])){ ?>
 <div class="row">
 	<div class="col-md-offset-4 col-md-5 col-md-offset-4">
-		<form action="index.php?action=auth" method="post" class="form-group">
+		<form action="index.php?action=login" method="post" class="form-group">
 			<legend>Veuillez vous authentifier :</legend>
 			<div class="form-group">
 				<label for="login"> Nom d'utilisateur :</label>
@@ -16,7 +16,7 @@ if (!isset($_SESSION['pseudo'])){ ?>
 			</div>
 			<div class="form-group">
 				<label for="password" >Mot de passe :</label>
-				<input type="password" class="form-control" id="password" name="password" placeholder="Mot de passe..." required/>
+				<input type="password" class="form-control" id="password" name="password" placeholder="Mot de passe..." />
 			</div>
 			<div class="form-group">
 				<button type="submit" class="btn btn-primary">Connexion</button>

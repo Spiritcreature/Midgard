@@ -20,8 +20,20 @@ if (isset($_GET['action']) && !empty($_GET['action']))
 			case ($_GET['action'] == 'contact'):
 				contact();
 				break;
-			case ($_GET['action'] == 'auth'):
+			case ($_GET['action'] == 'authentification'):
 				auth();
+				break;
+			case ($_GET['action'] == 'login'):
+				if (empty($_POST['login'] && $_POST['password']))
+				{
+					header ( 'Location: index.php?action=authentification');
+				}else
+				{
+					login($_POST['login'],$_POST['password']);
+				}
+				break;
+			case ($_GET['action'] == 'logout'):
+				logout();
 				break;
 			default:
 				header('HTTP/1.0 404 Not Found');
