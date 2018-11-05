@@ -1,10 +1,28 @@
 <?php ob_start(); ?>
-<div class="col-lg-12">
-	<p>Je suis passionné par les<strong>tigres</strong>depuis très longtemps. Ce site a été construit en <em> hommage à ces merveilleux félins...</em><br>				Je fais partie de la <abbr title="Société des Amoureux des Tigres">SAT</abbr> qui a pour but de faire connaître ces splendides animaux.</p>
-	<p>Voici ce qu'en dit le wikipedia :</p>
-	<blockquote>Le Tigre (Panthera tigris) est un mammifère carnivore de la famille des félidés (Felidae) du genre Panthera. Aisément reconnaissable à sa fourrure rousse rayée de noir, il est le plus grand félin sauvage et l'un des plus grands carnivores du monde. L'espèce est divisée en neuf sous-espèces possédant des différences mineures en termes de taille ou de comportement. Superprédateur, il chasse principalement les cerfs et les sangliers, bien qu'il puisse s'attaquer à des proies de taille plus importante comme les buffles. Jusqu'au XIXe siècle, le Tigre était réputé mangeur d'homme. La structure sociale des tigres en fait un animal solitaire ; le mâle possède un territoire qui englobe les domaines de plusieurs femelles et ne participe pas à l'éducation des petits.<br><small class="pull-right">Wikipedia</small><br>
-	</blockquote>
-</div>
+<div class="container-fluid">
+	<div class="row">
+			<div class="col-md-offset-2 col-md-8 col-md-offset-2">
+			<p><strong>Troyes</strong> est une ville médiévale, riche d'histoire et dans un cadre unique.</p>
+			<p>Vous aimez cette ville ça tombe bien nous aussi ! Venez vite au <strong>Midgard</strong> et découvrir ce <strong>Bar</strong> totalement unique où nous avons voulu reproduire le cadre de notre ville. Venez trinquer avec votre corne entre guerrier. Vous allez pouvoir rafraichir votre gosier d'hydromel, d'hypocras, de bieres fraiches et autres boissons...</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-offset1 col-md-10 col-md-offset-1 slide">
+			<div id="carousel" class="carousel slide" data-ride="carousel">
+				<div class="carousel-inner">
+					<div class="item active">
+						<img class="d-block w-100" src="public/img/cocktail.jpg" alt="First slide">
+					</div>
+					<div class="item">
+						<img class="d-block w-100" src="public/img/cocktail.jpg" alt="Second slide">
+					</div>
+					<div class="item">
+						<img class="d-block w-100" src="public/img/cocktail.jpg" alt="Third slide">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 <?php
 
 $content = ob_get_clean();

@@ -10,10 +10,10 @@ header{
 section{
 	min-height: 700px;
 	padding-top: 20px;
+	padding-bottom: 20px;
 	margin-bottom: 20px;
 	background-color: #000000;
 }
-
 
 .navbar-inverse{
 	background-color: #000000;
@@ -24,7 +24,15 @@ section{
 	height:90px;
 }
 
+.test{
+	border: 1px solid red;
+}
+
+
 footer{
 	color:#FFFFFF;
 }
 
+.down{
+	margin-bottom: 20px;
+}

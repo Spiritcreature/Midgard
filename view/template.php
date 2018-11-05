@@ -48,7 +48,7 @@
 					  </div>
 					  <div class="navbar-collapse collapse">
 						  <ul class="nav navbar-nav navbar-right">
-							  <li><a href="#">Accueil</a></li>
+							  <li><a href="index.php">Accueil</a></li>
 							  <li><a href="#">Boissons</a></li>
 							  <li><a href="#">Services</a></li>
 							  <li><a href="#">Reservation</a></li>
@@ -59,12 +59,13 @@
 			  </nav>
 		  </header>
 		  <section>
-			  <?= $content ?>
+				  <?= $content ?>
+			  </div>
 		  </section>
 	  </div>
 	  <footer>
 		  <div class="container">
-			  <div class="row">
+			  <div class="row down">
 				  <div class="col-xs-12 col-md-offset-2 col-md-8 text-center">© 2018 Copyright: Alexis Dizet</div>
 				  <div class="col-xs-12 col-md-1 text-center">
 					  <a class="btn-floating btn-lg btn-facebook" ><i class="fab fa-facebook"></i></a>
@@ -73,7 +74,6 @@
 					  <a class="btn-floating btn-lg btn-instagram" ><i class="fab fa-instagram"></i></a>
 				  </div>
 			  </div>
-			  
 	  </footer>
 
 	
