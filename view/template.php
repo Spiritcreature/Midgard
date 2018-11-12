@@ -54,8 +54,8 @@
 						  <li class="nav-item dropdown">
 							  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">Gestion carte</a>
 							  <div class="dropdown-menu">
-								  <a class="dropdown-item" href="index.php?action=goToAdd">Ajouter une boisson</a>
-								  <a class="dropdown-item" href="index.php?action=editMap">Retire de la vente</a>
+								  <a class="dropdown-item" href="index.php?action=goToAdd">Ajouter une nouvelle boisson</a>
+								  <a class="dropdown-item" href="index.php?action=editMap">Remettre / Retirer une boisson</a>
 							  </div>
 						  </li>
 						  <li class="nav-item"><a class="nav-link" href="index.php?action=drinks">Reservations</a></li>

@@ -25,7 +25,7 @@ ob_start();
 					?>
 					<div class="form-group">
 						<input type="checkbox" id="id" name="id[]" value="<?= $drink->id() ?>">
-						<label for="drink"><?= $drink->name() ?></label>
+						<label for="drink"><abbr title="<?= $drink->description() ?>"><?= $drink->name() ?></abbr></label>
 					</div>
 					<?php
 						}
@@ -42,7 +42,7 @@ ob_start();
 					?>
 					<div class="form-group">
 						<input type="checkbox" id="id" name="id[]" value="<?= $drink->id() ?>">
-						<label for="drink"><?= $drink->name() ?></label>
+						<label for="drink"><abbr title="<?= $drink->description() ?>"><?= $drink->name() ?></abbr></label>
 					</div>
 					<?php
 						}
@@ -59,7 +59,7 @@ ob_start();
 					?>
 					<div class="form-group">
 						<input type="checkbox" id="id" name="id[]" value="<?= $drink->id() ?>">
-						<label for="drink"><?= $drink->name() ?></label>
+						<label for="drink"><abbr title="<?= $drink->description() ?>"><?= $drink->name() ?></abbr></label>
 					</div>
 					<?php
 						}
@@ -93,7 +93,7 @@ ob_start();
 					?>
 					<div class="form-group">
 						<input type="checkbox" id="id" name="id[]" value="<?= $drink->id() ?>">
-						<label for="drink"><?= $drink->name() ?></label>
+						<label for="drink"><abbr title="<?= $drink->description() ?>"><?= $drink->name() ?></abbr></label>
 					</div>
 					<?php
 						}
@@ -110,7 +110,7 @@ ob_start();
 					?>
 					<div class="form-group">
 						<input type="checkbox" id="id" name="id[]" value="<?= $drink->id() ?>">
-						<label for="drink"><?= $drink->name() ?></label>
+						<label for="drink"><abbr title="<?= $drink->description() ?>"><?= $drink->name() ?></abbr></label>
 					</div>
 					<?php
 						}
@@ -127,7 +127,7 @@ ob_start();
 					?>
 					<div class="form-group">
 						<input type="checkbox" id="id" name="id[]" value="<?= $drink->id() ?>">
-						<label for="drink"><?= $drink->name() ?></label>
+						<label for="drink"><abbr title="<?= $drink->description() ?>"><?= $drink->name() ?></abbr></label>
 					</div>
 					<?php
 						}

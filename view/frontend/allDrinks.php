@@ -10,7 +10,7 @@
 	</div>
 	<div class="row">
 		<?php foreach ($allDrinks as $drink){ 
-		if ($drink->category() === 'Médiévale'){
+		if ($drink->category() === 'Médiévale' && $drink->rem()== 0){
 		?>
 		<div class="col-md-offset-1 col-md-10">
 			<h3><?= $drink->name() ?></h3>
@@ -26,7 +26,23 @@
 	</div>
 	<div class="row">
 		<?php foreach ($allDrinks as $drink){ 
-		if ($drink->category() === 'Bière'){
+		if ($drink->category() === 'Bière'  && $drink->rem()== 0){
+		?>
+		<div class="col-md-offset-1 col-md-10">
+			<h3><?= $drink->name() ?></h3>
+			<img class="img-bottle" src="public/img/<?= $drink->image() ?>" alt="Photo de la boisson">
+			<p><?= $drink->description() ?></p>
+		</div>
+		<?php }} ?>
+	</div>
+	<div class="row">
+		<div class="col-md-12 text-center">
+			<h1>Sans alcool</h1>
+		</div>
+	</div>
+	<div class="row">
+		<?php foreach ($allDrinks as $drink){ 
+		if ($drink->category() === 'Sans Alcool'  && $drink->rem()== 0){
 		?>
 		<div class="col-md-offset-1 col-md-10">
 			<h3><?= $drink->name() ?></h3>
