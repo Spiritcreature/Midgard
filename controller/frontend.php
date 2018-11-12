@@ -2,6 +2,7 @@
 
 // Chargement des classes
 require_once('model/backend/UserManager.php');
+require_once('model/frontend/DrinkManager.php');
 
 
 function welcome(){
@@ -10,13 +11,10 @@ function welcome(){
 
 
 function drinks(){
-	
-	require('view/frontend/drinks.php');
-}
-
-function services(){
-	
-	require('view/frontend/services.php');
+	$drinkmanager = new DrinkManager();
+	$allDrinks = $drinkmanager->getDrinks();
+		
+	require('view/frontend/allDrinks.php');
 }
 
 function reservations(){
@@ -46,7 +44,7 @@ function login($login, $password){
         {
             $_SESSION['pseudo'] = $userExist->login();
 			$_SESSION['id'] = $userExist->id();
-			header( 'Location: index.php' );
+			header( 'Location: index.php?action=editMap' );
 			exit();
 			
         }else{

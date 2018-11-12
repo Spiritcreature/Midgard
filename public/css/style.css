@@ -11,23 +11,54 @@ header{
 	margin-top: 20px;
 }
 
+th{
+	text-align: center;
+}
+
+.btn-default{
+	border: 1px #868684 solid;
+	background-color: #80807E;
+	color: #FFFFFF;
+}
+
+.btn-default:hover{
+	background-color: #80807E;
+	background-color: #636262;
+	color: #FFFFFF;
+}
+
+.dropdown-menu{
+	background-color: #000000;
+	border: #2E2E2E 1px solid;
+}
+
+.dropdown-item{
+	color: #989797;
+}
+
+.dropdown-item:active{
+	background-color: #3B3B3B;
+}
+
 [class*="col"] {
 	padding: 12px 10px;
 }
 
 .admin{
-	color:#F1E20C; 
+	color:#FFFFFF; 
 }
 .content{
-	min-height: 700px;
+	min-height: 680px;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	margin-bottom: 20px;
-	background-color: #000000;
+	background-image: url(../img/baniere.jpg);
+	background-repeat: no-repeat;
 }
 
-.navbar-inverse{
-	background-color: #000000;
+.navbar-dark{
+	background-image: url(../img/baniere.jpg);
+	margin-bottom: 20px;
 }
 
 .navbar-brand{
@@ -44,6 +75,11 @@ header{
 	height:110px;
 	margin-right: 8px;
 }
+
+#form-alcohol-free-rem, #form-beer-rem, #form-beer-res, #form-alcohol-free-res{
+	display: none;
+}
+
 
 footer{
 	color:#FFFFFF;

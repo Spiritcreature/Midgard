@@ -19,14 +19,4 @@ class UserManager extends Database
 		
 		return $answer;
 	}
-	
-	// fonction pour se déloguer
-	function logout()
-{
-	session_start();
-	session_destroy();
-	unset($_SESSION['pseudo']);
-	header('location: index.php');
-	exit();
-}
 }
