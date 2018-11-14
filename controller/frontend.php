@@ -48,10 +48,10 @@ function login($login, $password){
 			exit();
 			
         }else{
-            addMessage('danger','Nom d\'utilisateur ou mot de passe incorrect !');
+            header('Location: index.php?action=wrongUser');
         }
     }else{
-        addMessage('danger','Nom d\'utilisateur ou mot de passe incorrect !');
+        header('Location: index.php?action=wrongUser');
     }
 	require('view/frontend/authentification.php');
 }

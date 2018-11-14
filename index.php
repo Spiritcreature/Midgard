@@ -11,8 +11,8 @@ if (isset($_GET['action']) && !empty($_GET['action']))
 			case ($_GET['action'] == 'drinks'):
 				drinks();
 				break;
-			case ($_GET['action'] == 'services'):
-				require('view/frontend/services.php');
+			case ($_GET['action'] == 'actu'):
+				require('view/frontend/avis.php');
 				break;
 			case ($_GET['action'] == 'reservations'):
 				reservations();
@@ -22,6 +22,9 @@ if (isset($_GET['action']) && !empty($_GET['action']))
 				break;
 			case ($_GET['action'] == 'authentification'):
 				auth();
+				break;
+			case ($_GET['action'] == 'wrongUser'):
+				require('view/frontend/wrongUser.php');
 				break;
 			case ($_GET['action'] == 'login'):
 				if (empty($_POST['login'] && $_POST['password']))

@@ -4,12 +4,13 @@ ob_start();
 ?>
 <section>
 	<div class="row">
-		<div class="col-xs-12 col-sm-12 col-md-6 test">
+		<div class="col-xs-12 col-sm-12 col-md-6">
 			<h3>Retirer de la vente :</h3>
 			<form method="post" action="index.php?action=remove" class="form-group">
 				<div class="form-group">
 					<label for="select">Type de boissons:</label>
 					<select class="form-control" id="selectRemove">
+						<option value="" disabled selected>Faites votre choix...</option>
 						<option value="Médiévale">Médiévale</option>
 						<option value="Bière">Bière</option> 
 						<option value="Sans alcool">Sans alcool</option> 
@@ -71,13 +72,13 @@ ob_start();
 				</div>
 			</form>
 		</div>
-		<div class="col-xs-12 col-sm-12 col-md-6 test">
+		<div class="col-xs-12 col-sm-12 col-md-6">
 			<h3>Remettre en vente :</h3>
 			<form method="post" action="index.php?action=reset" class="form-group">
 				<div class="form-group">
 					<label for="select">Quelle boissons ? :</label>
 					<select class="form-control" id="selectReset">
-						<option value="">Faites votre choix...</option>
+						<option value=""disabled selected>Faites votre choix...</option>
 						<option id="Médiévale">Médiévale</option>
 						<option id="Bière">Bière</option>
 						<option id="Sans alcool">Sans alcool</option>

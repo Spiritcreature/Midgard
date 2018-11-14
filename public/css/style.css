@@ -1,6 +1,13 @@
 body{
 	background-image: url(../img/wood-planks-wood-wood-texture.jpg);
 	color: #8F6E1A;
+	font-family: 'Marck Script', cursive;
+	font-size: 22px;
+}
+
+.nav-menu{
+	font-size: 20px;
+	font-family: 'MedievalSharp', cursive;
 }
 
 p{
@@ -47,23 +54,36 @@ th{
 .admin{
 	color:#FFFFFF; 
 }
+
+.mjolnir{
+	width: 100%;
+}
 .content{
 	min-height: 680px;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	margin-bottom: 20px;
-	background-image: url(../img/baniere.jpg);
-	background-repeat: no-repeat;
+	background-color:rgba(0,0,0,0.88);
 }
 
 .navbar-dark{
-	background-image: url(../img/baniere.jpg);
+	background-color: #000000;
 	margin-bottom: 20px;
 }
 
 .navbar-brand{
-	width: 90px;
-	height:90px;
+	width:150px;
+	height:120px;
+}
+
+.carousel-warrior{
+	height: 400px;
+}
+
+.fb-comments{
+	background-color: #FDFCFC;
+	border: 1px #000000 solid;
+	border-radius: 6px;
 }
 
 .test{

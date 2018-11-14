@@ -11,24 +11,22 @@ var Button = {
 	
 	selectRemove : function()
 	{
-		document.getElementById('selectRemove').addEventListener('change', function(){
+		$('#selectRemove').change(function(){
+			
 			if (this.value === 'Médiévale')
 			{
-				$('#form-beer-rem').css('display','none');
-				$('#form-alcohol-free-rem').css('display','none');
-				$('#form-mediv-rem').css('display','block');
+				$('#form-beer-rem ,#form-alcohol-free-rem').hide();
+				$('#form-mediv-rem').show();
 			}
 			else if(this.value === 'Sans alcool')
 			{
-				$('#form-beer-rem').css('display','none');
-				$('#form-mediv-rem').css('display','none');
-				$('#form-alcohol-free-rem').css('display','block');		 
+				$('#form-beer-rem,#form-mediv-rem').hide();
+				$('#form-alcohol-free-rem').show();		 
 			}
 			else if(this.value === 'Bière')
 			{
-				$('#form-alcohol-free-rem').css('display','none');
-				$('#form-mediv-rem').css('display','none');
-				$('#form-beer-rem').css('display','block');		 
+				$('#form-alcohol-free-rem,#form-mediv-rem').hide();
+				$('#form-beer-rem').show();		 
 			}
 		},false); 	
 	},
