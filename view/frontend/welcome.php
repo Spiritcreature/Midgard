@@ -7,7 +7,7 @@
 	<div class="row justify-content-center">
 		<div class="col-md-8 justify-content-md-center">
 			<p><strong>Troyes</strong> est une ville médiévale, riche d'histoire et dans un cadre unique.</p>
-			<p>Vous aimez cette ville ça tombe bien nous aussi ! Venez vite au <strong>Midgard</strong> et découvrir ce <strong>Bar</strong> totalement unique où nous avons voulu reproduire le cadre de notre ville. Venez trinquer avec votre corne entre guerriers. Vous allez pouvoir rafraichir votre gosier d'hydromel, d'hypocras, de bieres fraiches et autres boissons...</p>
+			<p>Vous aimez cette ville ça tombe bien nous aussi ! Venez vite au <strong>Midgard</strong> et découvrir ce <strong>Bar Troyens</strong> totalement unique où nous avons voulu reproduire un cadre convivial. Venez trinquer avec votre corne entre guerriers. Vous allez pouvoir rafraichir votre gosier d'hydromel, d'hypocras, de bieres fraiches et autres boissons...</p>
 		</div>
 	</div>
 	<div class="row justify-content-center">

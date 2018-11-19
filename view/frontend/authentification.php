@@ -6,8 +6,8 @@
 <?php 
 
 if (!isset($_SESSION['pseudo'])){ ?>
-<div class="row">
-	<div class="col-md-offset-4 col-md-5 col-md-offset-4">
+<div class="row justify-content-center">
+	<div class="col-md-5">
 		<form action="index.php?action=login" method="post" class="form-group">
 			<legend>Veuillez vous authentifier :</legend>
 			<div class="form-group">

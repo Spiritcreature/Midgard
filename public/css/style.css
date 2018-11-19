@@ -1,9 +1,11 @@
 body{
 	background-image: url(../img/wood-planks-wood-wood-texture.jpg);
 	color: #8F6E1A;
-	font-family: 'Marck Script', cursive;
-	font-size: 22px;
+	font-family: '', cursive;
+	font-size: 18px;
 }
+
+
 
 .nav-menu{
 	font-size: 20px;
@@ -18,8 +20,25 @@ header{
 	margin-top: 20px;
 }
 
-th{
+#info{
+	border: 1px #FFFFFF solid;
+}
+
+#info td{
+	padding-right: 15px;
+} 
+
+fieldset{
+	padding: 10px;
+	border: 1px #FFFFFF solid;
+	border-radius: 6px;
+}
+
+legend{
 	text-align: center;
+	border: 1px #FFFFFF solid;
+	border-radius: 6px;
+	padding-left: 5px;
 }
 
 .btn-default{
@@ -27,6 +46,7 @@ th{
 	background-color: #80807E;
 	color: #FFFFFF;
 }
+
 
 .btn-default:hover{
 	background-color: #80807E;
@@ -58,7 +78,7 @@ th{
 .mjolnir{
 	width: 100%;
 }
-.content{
+.container-font{
 	min-height: 680px;
 	padding-top: 20px;
 	padding-bottom: 20px;
@@ -69,11 +89,6 @@ th{
 .navbar-dark{
 	background-color: #000000;
 	margin-bottom: 20px;
-}
-
-.navbar-brand{
-	width:150px;
-	height:120px;
 }
 
 .carousel-warrior{
