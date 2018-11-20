@@ -9,16 +9,22 @@ var Datepicker = {
 	active : function()
 	{
 		$("#datepicker").datepicker({
-			buttonImage: 'public/img/event.jpg' ,
-			autoSize: true,
-			monthNames: [ "Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Décember" ],
-			dayNames:["Dimanche","Lundi", "Mardi", "Mercredi", "Jeudi","Vendredi" ,"Samedi"],
-			dayNamesMin: [ "Di", "Lu", "Ma", "Me", "Je", "Ve", "Sa" ],
+			firstDay: 1,
+			altField: "#datepicker",
+			closeText: 'Fermer',
+			prevText: 'Précédent',
+			nextText: 'Suivant',
+			currentText: 'Aujourd\'hui',
+			monthNames: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+			monthNamesShort: ['Janv.', 'Févr.', 'Mars', 'Avril', 'Mai', 'Juin', 'Juil.', 'Août', 'Sept.', 'Oct.', 'Nov.', 'Déc.'],
+			dayNames: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
+			dayNamesShort: ['Dim.', 'Lun.', 'Mar.', 'Mer.', 'Jeu.', 'Ven.', 'Sam.'],
+			dayNamesMin: ['D', 'L', 'M', 'M', 'J', 'V', 'S'],
+			weekHeader: 'Sem.',
 			dateFormat: 'dd/mm/yy',
 			minDate: '+1d',
 			firstDay: 1,
-			beforeShowDay: function(date)
-			{
+			beforeShowDay: function (date) {
 				return [date.getDay() !== 1 && date.getDay() !== 0, ];
 			},
 			
