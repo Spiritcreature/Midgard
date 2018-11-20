@@ -6,7 +6,7 @@
 <section>
 	<div class="row justify-content-center">
 		<div class="col-md-12">
-			<p>Hormis le fait d'être un bar à thème. Nous organisons des soirées et vous proposons de reserver un coin du bar pour :</p>
+			<p>Hormis le fait d'être un bar à thème. Nous organisons aussi des soirées à thème.  Vous pouvez également reserver un coin du bar pour un évènement particulier :</p>
 			<ul>
 				<li>Détente entreprise (Attention max 10 personnes).</li>
 				<li>Enterrement de jeune guerrier(e) voulant poser les armes avant de s'unir.</li>

@@ -10,6 +10,7 @@ var Datepicker = {
 	{
 		$("#datepicker").datepicker({
 			firstDay: 1,
+			autoSize: true,
 			altField: "#datepicker",
 			closeText: 'Fermer',
 			prevText: 'Précédent',
@@ -23,7 +24,6 @@ var Datepicker = {
 			weekHeader: 'Sem.',
 			dateFormat: 'dd/mm/yy',
 			minDate: '+1d',
-			firstDay: 1,
 			beforeShowDay: function (date) {
 				return [date.getDay() !== 1 && date.getDay() !== 0, ];
 			},
