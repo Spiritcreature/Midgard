@@ -2,6 +2,7 @@
 
 // Chargement des classes
 require_once('model/frontend/DrinkManager.php');
+require_once('model/backend/EventManager.php');
 
 
 function editMap()
@@ -53,6 +54,14 @@ function addDrink($name, $description, $image,$type)
 	$adding = $drinksmanager->insertDrink($name, $description, $image, $type);
 	
 	require('view/backend/addDrink.php');
+}
+
+function addEvent($name, $phone, $mail, $cat, $nbperson, $comment, $date){
+	
+	$eventmanager = new EventManager();
+	$addEvent = $eventmanager->newEvent($name, $phone, $mail, $cat, $nbperson, $comment, $date);
+	
+	require('view/frontend/reservation.php');
 }
 
 function addMessage($key,$value)

@@ -74,15 +74,15 @@ if (isset($_GET['action']) && !empty($_GET['action']))
 				{
 					echo('Nom vide.');
 				}
-				if(empty($_POST['desc']))
+				elseif(empty($_POST['desc']))
 				{
 					echo('Description vide.');
 				}
-				if($_POST['cat'] === 'Catégorie...' )
+				elseif($_POST['cat'] === 'Catégorie...' )
 				{
 					echo('Catégorie vide.');
 				}
-				if($_FILES['image']['error'] > 0)
+				elseif($_FILES['image']['error'] > 0)
 				{
 					echo('Image vide');
 				}
@@ -92,6 +92,41 @@ if (isset($_GET['action']) && !empty($_GET['action']))
 					addDrink($_POST['name'], $_POST['desc'], $_FILES['image']['name'],$_POST['cat']);
 					
 					header('Location: index.php?action=addDrink');
+				}
+				break;
+			case ($_GET['action'] == 'addEvent'):
+				
+				if (empty($_POST['datepicker']) || $_POST['datepicker'] <= date('d/m/Y'))
+				{
+					echo('Date invalide ou non remplie');
+				}
+				elseif (empty($_POST['name']) /*|| preg_match("#^[^ \w]#")*/)
+				{
+					echo('Merci de renseigner votre nom');
+				}
+				elseif (empty($_POST['phone']) || !preg_match("#^0[1-68]([-. ]?[0-9]{2}){4}$#", $_POST['phone']) )
+				{
+					echo('Merci de renseigner votre numéro de téléphone');
+				}
+				elseif (empty($_POST['mail']) || !preg_match("#^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$#", $_POST['phone']))
+				{
+					echo('Merci de renseigner une adresse mail valide');
+				}
+				elseif (empty($_POST['category']))
+				{
+					echo('Merci de faire votre choix');
+				}
+				elseif (empty($_POST['nbperson']) || $_POST['nbperson']< 10)
+				{
+					echo('Merci de faire votre choix');
+				}
+				elseif ($_POST['category'] == 'Autre' && empty($_POST['comment']))
+				{
+					echo('Vous avez sélectionné le choix autre, merci de préciser votre demande');
+				}
+				else
+				{
+					addEvent($_POST['name'], $_POST['phone'], $_POST['mail'], $_POST['category'], $_POST['nbperson'], $_POST['comment'], $_POST['datepicker']);
 				}
 				break;
 			default:

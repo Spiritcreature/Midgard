@@ -27,9 +27,6 @@ var Datepicker = {
 			beforeShowDay: function (date) {
 				return [date.getDay() !== 1 && date.getDay() !== 0, ];
 			},
-			
-			
-			
 		});
 
 	},

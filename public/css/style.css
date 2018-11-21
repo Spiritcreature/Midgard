@@ -1,15 +1,40 @@
 body{
 	background-image: url(../img/wood-planks-wood-wood-texture.jpg);
-	color: #8F6E1A;
-	font-family: '', cursive;
-	font-size: 18px;
+	color: #C3C1C1;
+	font-family: 'arial', cursive;
+	font-size: 16px;
 }
 
+.navbar-dark{
+	background-image: url(../img/wood-planks-wood-wood-texture.jpg);
+}
 
+section{
+	background-color:rgba(0,0,0,0.77)!important;
+	min-height: 680px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
 
 .nav-menu{
-	font-size: 20px;
+	color: #E7E7E7!important;
+	font-size: 25px;
 	font-family: 'MedievalSharp', cursive;
+}
+
+.nav-menu:hover{
+	color: #C99207!important;
+}
+
+.left{
+	background-image: url(../img/Wood-wallpapers.jpg);
+	background-repeat:round;
+}
+
+.right{
+	background-image: url(../img/Wood-wallpapers.jpg);
+	background-repeat:round;
 }
 
 p{
@@ -77,13 +102,6 @@ legend{
 
 .mjolnir{
 	width: 100%;
-}
-.container-font{
-	min-height: 680px;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	margin-bottom: 20px;
-	background-color:rgba(0,0,0,0.88);
 }
 
 .navbar-dark{

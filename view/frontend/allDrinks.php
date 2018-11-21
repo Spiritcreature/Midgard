@@ -2,7 +2,6 @@
 	$title = "Les boissons du midgard";
 	ob_start(); 
 ?>
-<section>
 	<div class="row">
 		<div class="col-md-12 text-center">
 			<h1>Boissons médiévales</h1>
@@ -51,7 +50,6 @@
 		</div>
 		<?php }} ?>
 	</div>
-</section>
 <?php
 
 $content = ob_get_clean();
