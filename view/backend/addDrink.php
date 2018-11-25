@@ -1,5 +1,5 @@
 <?php
-$title = "Editer la carte";
+$title = "Ajouter une boisson";
 ob_start();
 ?>
 <section>

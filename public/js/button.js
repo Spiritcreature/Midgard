@@ -5,6 +5,7 @@ var Button = {
 	{
 		this.selectRemove();
 		this.selectReset();
+		this.closePopup();
 	},
 	
 	
@@ -52,4 +53,15 @@ var Button = {
 		  });	
 	},
 	
+	closePopup : function()
+	{
+		$('document').ready(function(){
+			$('.popup-admin').show();
+			$('#close').click(function(){
+				$('.popup-admin').hide();
+				$('.popup-wrong').hide();
+				$('.popup-success').hide();
+			});
+		});
+	}
 };

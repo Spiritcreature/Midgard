@@ -23,4 +23,24 @@ class EventManager extends Database
 		$req = $db->prepare('INSERT INTO events (name, phone, email, catEvent, nbPerson, comment, reservationDate ) VALUES ( ?, ?, ?, ?, ?, ?, ?)');
 		$req->execute(array($NewName, $NewPhone, $NewMail, $NewCat, $nbpersons, $NewComment, $NewDate));
 	}
+	
+	public function getEvents()
+	{
+		$events=[];
+		$db = $this->dbConnect();
+		$req = $db->query('SELECT * FROM events');
+		while ($data = $req->fetch(PDO::FETCH_ASSOC))
+		{
+			$events[] = new Event($data);
+		}
+		
+		return $events;
+	}
+	
+	public function delevent($id)
+	{
+		$db = $this->dbConnect();
+		$req = $db->prepare('DELETE FROM events WHERE id= :id');
+		$req->execute(array('id'=>$id));
+	}
 }

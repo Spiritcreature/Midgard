@@ -5,8 +5,8 @@
 
 	<div class="row justify-content-center">
 		<div class="col-md-10">
-			<p>Ohhh toi noble combatant perdu devant les portes du <strong>Midgard</strong>, tu te situes dans la ville de <strong>Troyes</strong> unique en sont genre et chargée d'histoire d'un autre temps. Vous aimez cette ville ça tombe bien nous aussi ! Troyes et son architecture moyenâgeuse offrent un cadre atipique parfait pour accueillir les portes du <b>Midgard.</b></p>
-			<p>Vous avez combattu toute la journée ? Vous avez quitté votre champ de bataille ? Marre de tous ces guerriers qui font sonner le fer de leurs armes ? Rendez-vous dans les terres du mileu, Le <b>Midgard</b>. Où l'odeur du bois et des épices combleront vos sens, dans cette taverne ou la bonne hummeur et l'allégresse coulent à flot. Vous pourrez vous détendre et vous réunir autour d'une bonne chope de <strong>bière</strong>, d'<strong>hypocras</strong>, d'<strong>hydromel</strong> et d'autres liquides dont plusieurs <strong>guerriers</strong> en ont perdu la raison. Ohhh toi fier guerrier viens si tu l'oses passer les portes du Midgard et t'attabler avec tes compagnons d'armes. Nous t'attendons de pied ferme et au contraire de tes ennemies qui eux usent de leurs haches, nous leverons nos cornes remplies de doux breuvage de la victoire.</p>
+			<p>Ohhh vous nobles combatants perdus devant les portes du <strong>Midgard</strong>, vous vous situez dans la ville de <strong>Troyes</strong> unique en sont genre et chargée d'histoire d'un autre temps. Vous aimez cette ville ça tombe bien nous aussi ! Troyes et son architecture moyenâgeuse offrent un cadre atipique, parfait pour accueillir les portes du <b>Midgard.</b></p>
+			<p>Vous avez combattu toute la journée ? Vous avez quitté votre champ de bataille ? Marre de tous ces guerriers qui font sonner le fer de leurs armes ? Rendez-vous dans les terres du mileu du <b>Midgard</b>. Où l'odeur du bois et des épices combleront vos sens, dans cette taverne ou la bonne hummeur et l'allégresse coulent à flot. Vous pourrez vous détendre et vous réunir autour d'une bonne chope de <strong>bière</strong>, d'<strong>hypocras</strong>, d'<strong>hydromel</strong> et d'autres liquides dont plusieurs <strong>guerriers</strong> en ont perdu la raison. Ôhhh vous fier guerriers venez si vous l'osez passer les portes du Midgard et vous'attablez avec vos compagnons d'armes. Nous vous attendons de pied ferme et au contraire de vos ennemies, nous leverons nos cornes remplies de doux breuvage pour fêter votre victoire.</p>
 		</div>
 	</div>
 	<div class="row justify-content-center">
@@ -31,6 +31,47 @@
 			</div>			
 		</div>
 	</div>
+<!-- POPUP ADMIN -->
+<?php
+if ( isset( $_SESSION[ 'pseudo' ] ) ) {
+?>
+	<div class="col-md-8 popup-admin">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-right" id="close" >
+					<i class="fas fa-times"></i>
+				</div>
+				<div class="col-md-12 text-center">
+					<h4>Vous êtes connecté en administrateur.</h4>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-8 text-center">
+					<table class="table">
+						<thead>
+							<th scope="col">Message du jour</th>
+						</thead>
+						<tbody>
+							<?php foreach ($listComments as $alert){
+							if (!empty($alert->comment())){ ?>
+							<tr>
+								<td><?= $alert->comment() ?></td>
+							</tr>
+							<?php }else{ ?>
+							<tr>
+								<td></td>
+							</tr>
+							<?php }} ?>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+<?php
+}
+?>
+<!-- POPUP ADMIN -->
 <?php
 	$content = ob_get_clean();
 	require('view/template.php');

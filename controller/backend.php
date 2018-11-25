@@ -3,6 +3,7 @@
 // Chargement des classes
 require_once('model/frontend/DrinkManager.php');
 require_once('model/backend/EventManager.php');
+require_once('model/backend/MessageManager.php');
 
 
 function editMap()
@@ -56,12 +57,54 @@ function addDrink($name, $description, $image,$type)
 	require('view/backend/addDrink.php');
 }
 
-function addEvent($name, $phone, $mail, $cat, $nbperson, $comment, $date){
+function addEvent($name, $phone, $mail, $cat, $nbperson, $comment, $date)
+{
 	
 	$eventmanager = new EventManager();
 	$addEvent = $eventmanager->newEvent($name, $phone, $mail, $cat, $nbperson, $comment, $date);
+	addMessage('success','Votre demande a bien été prise en compte.');
 	
 	require('view/frontend/reservation.php');
+}
+
+function adminReservation()
+{
+	$eventmanager = new EventManager();
+	$events = $eventmanager->getEvents();
+	
+	require('view/backend/adminReservation.php');
+}
+
+function deleteEvent($id)
+{
+	$eventmanager = new EventManager();
+	$del = $eventmanager->delevent($id);
+	
+	header('Location: index.php?action=adminReserView');
+}
+
+function newComment($comment)
+{
+	$messageManager = new MessageManager();
+	$addComment = $messageManager->addComment($comment);
+	
+	header('Location: index.php?action=toDoList');
+}
+
+function getComment()
+{
+	$messageManager = new MessageManager();
+	$listComments = $messageManager->getMessage();
+	
+	require('view/backend/toDo.php');
+}
+
+function delComment($id)
+{
+	$messageManager = new MessageManager();
+	$listComments = $messageManager->deleteComment($id);
+	
+	header('Location: index.php?action=toDoList');
 }
 
 function addMessage($key,$value)

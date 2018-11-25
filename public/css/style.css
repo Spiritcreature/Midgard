@@ -14,7 +14,7 @@ section{
 	min-height: 680px;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	margin-bottom: 20px;
+
 }
 
 .nav-menu{
@@ -24,6 +24,16 @@ section{
 }
 
 .nav-menu:hover{
+	color: #C99207!important;
+}
+
+.admin-link{
+	color: #E7E7E7!important;
+	font-family: 'MedievalSharp', cursive;
+	font-size: 25px;
+}
+
+.admin-link:hover{
 	color: #C99207!important;
 }
 
@@ -40,6 +50,7 @@ section{
 p{
 	text-align: justify;
 }
+
 
 header{
 	margin-top: 20px;
@@ -129,15 +140,79 @@ legend{
 	margin-right: 8px;
 }
 
+.row-choice{
+	margin-left: 2px;
+}
+
 #form-alcohol-free-rem, #form-beer-rem, #form-beer-res, #form-alcohol-free-res{
 	display: none;
 }
 
+/* POPUP  */
+
+.popup-admin{
+	animation: fadein 1s;
+	display: none;
+	color: #000000;
+	top: 340px;
+	left: 16%;
+	min-height: 400px;
+	position: absolute;
+	border: 4px #FBFBFB solid;
+	border-radius: 6px;
+	background-color: #A4A4A4;
+}
+
+.popup-wrong{
+	animation: fadein 1s;
+	color: #000000;
+	bottom: 120px;
+	left: 50%;
+	height: 80px;
+	position: absolute;
+	border: 1px #FBFBFB solid;
+	border-radius: 6px;
+	background-color: #BB2E31;
+	text-align: center;
+}
+
+.popup-success{
+	animation: fadein 1s;
+	color: #000000;
+	bottom: 120px;
+	left: 50%;
+	height: 80px;
+	position: absolute;
+	border: 1px #FBFBFB solid;
+	border-radius: 6px;
+	background-color: #A8F08F;
+}
+
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+#close{
+	cursor: pointer;
+}
+
+@media (max-width: 420px){
+	.popup-admin{
+		left: 0%;
+	}
+}
+
+/* POPUP  */
 
 footer{
 	color:#FFFFFF;
+	background-color:rgba(0,0,0,0.77);
 }
 
-.down{
-	margin-bottom: 20px;
-}
+

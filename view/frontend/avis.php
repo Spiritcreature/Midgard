@@ -1,5 +1,5 @@
 <?php 
-	$title = "Les services du Midgard";
+	$title = "Les avis de nos Guerriers";
 	ob_start();
 ?>
 <section>

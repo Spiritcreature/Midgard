@@ -15,7 +15,7 @@ if (isset($_GET['action']) && !empty($_GET['action']))
 				require('view/frontend/avis.php');
 				break;
 			case ($_GET['action'] == 'reservations'):
-				reservations();
+				require('view/frontend/reservation.php');
 				break;
 			case ($_GET['action'] == 'contact'):
 				contact();
@@ -44,11 +44,6 @@ if (isset($_GET['action']) && !empty($_GET['action']))
 			case ($_GET['action'] == 'editMap'):
 				editMap();
 				break;
-				/*
-			case ($_GET['action'] == 'delete'):
-				delete($_POST['id']);
-				break;
-				*/
 			case ($_GET['action'] == 'remove'):
 				if (!empty($_POST['id']))
 				{
@@ -95,39 +90,61 @@ if (isset($_GET['action']) && !empty($_GET['action']))
 				}
 				break;
 			case ($_GET['action'] == 'addEvent'):
-				
-				if (empty($_POST['datepicker']) || $_POST['datepicker'] <= date('d/m/Y'))
+		
+				if (empty($_POST['datepicker']) || date('d/m/Y') < $_POST['datepicker'])
 				{
-					echo('Date invalide ou non remplie');
+					addMessage('wrong','Date invalide ou non remplie');
+					header('Location: index.php?action=reservations');
 				}
-				elseif (empty($_POST['name']) /*|| preg_match("#^[^ \w]#")*/)
+				elseif (empty($_POST['name']))
 				{
-					echo('Merci de renseigner votre nom');
+					addMessage('wrong','Merci de renseigner votre nom');
+					header('Location: index.php?action=reservations');
 				}
 				elseif (empty($_POST['phone']) || !preg_match("#^0[1-68]([-. ]?[0-9]{2}){4}$#", $_POST['phone']) )
 				{
-					echo('Merci de renseigner votre numéro de téléphone');
+					addMessage('wrong', 'Format de numéro invalide');
+					header('Location: index.php?action=reservations');
 				}
-				elseif (empty($_POST['mail']) || !preg_match("#^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$#", $_POST['phone']))
+				elseif (empty($_POST['mail']) || !preg_match("#^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$#", $_POST['mail']))
 				{
-					echo('Merci de renseigner une adresse mail valide');
+					addMessage('wrong', 'Adresse mail non valide');
+					header('Location: index.php?action=reservations');
 				}
-				elseif (empty($_POST['category']))
+				elseif (!isset($_POST['category']))
 				{
-					echo('Merci de faire votre choix');
+					addMessage('wrong','Merci de renseigner le type de réservation.');
+					header('Location: index.php?action=reservations');
 				}
-				elseif (empty($_POST['nbperson']) || $_POST['nbperson']< 10)
+				elseif (!isset($_POST['nbperson']) || $_POST['nbperson']>= 10)
 				{
-					echo('Merci de faire votre choix');
+					addMessage('wrong', 'Vous n\'avez pas choisi le nombre de personnes');
+					header('Location: index.php?action=reservations');
 				}
-				elseif ($_POST['category'] == 'Autre' && empty($_POST['comment']))
+				elseif (empty($_POST['comment']) && $_POST['category'] == 'Autre')
 				{
-					echo('Vous avez sélectionné le choix autre, merci de préciser votre demande');
+					addMessage('success','Vous avez sélectionné le choix autre, merci de préciser votre demande en commentaire.');
+					header('Location: index.php?action=reservations');
 				}
 				else
 				{
 					addEvent($_POST['name'], $_POST['phone'], $_POST['mail'], $_POST['category'], $_POST['nbperson'], $_POST['comment'], $_POST['datepicker']);
 				}
+				break;
+			case ($_GET['action'] == 'adminReserView'):
+				adminReservation();
+				break;
+			case ($_GET['action'] == 'deleteEvent'):
+				deleteEvent($_GET['id']);
+				break;
+			case ($_GET['action'] == 'toDoList'):
+				getComment();
+				break;
+			case ($_GET['action'] == 'addMessage'):
+				newComment($_POST['comment']);
+				break;
+			case ($_GET['action'] == 'deleteComment'):
+				delComment($_GET['id']);
 				break;
 			default:
 				header('HTTP/1.0 404 Not Found');

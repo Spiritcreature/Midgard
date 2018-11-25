@@ -4,8 +4,10 @@
 require_once('model/backend/UserManager.php');
 require_once('model/frontend/DrinkManager.php');
 
-
 function welcome(){
+	$messageManager = new MessageManager();
+	$listComments = $messageManager->getMessage();
+	
 	require('view/frontend/welcome.php');
 }
 
@@ -15,11 +17,6 @@ function drinks(){
 	$allDrinks = $drinkmanager->getDrinks();
 		
 	require('view/frontend/allDrinks.php');
-}
-
-function reservations(){
-	
-	require('view/frontend/reservation.php');
 }
 
 function contact(){
@@ -44,7 +41,7 @@ function login($login, $password){
         {
             $_SESSION['pseudo'] = $userExist->login();
 			$_SESSION['id'] = $userExist->id();
-			header( 'Location: index.php?action=editMap' );
+			header( 'Location: index.php' );
 			exit();
 			
         }else{
