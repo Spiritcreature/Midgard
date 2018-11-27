@@ -123,7 +123,7 @@ if (isset($_GET['action']) && !empty($_GET['action']))
 				}
 				elseif (empty($_POST['comment']) && $_POST['category'] == 'Autre')
 				{
-					addMessage('success','Vous avez sélectionné le choix autre, merci de préciser votre demande en commentaire.');
+					addMessage('wrong','Vous avez sélectionné le choix autre, merci de préciser votre demande en commentaire.');
 					header('Location: index.php?action=reservations');
 				}
 				else

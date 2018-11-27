@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  jeu. 22 nov. 2018 à 14:50
+-- Généré le :  Dim 25 nov. 2018 à 15:50
 -- Version du serveur :  5.7.21
 -- Version de PHP :  5.6.35
 
@@ -39,18 +39,23 @@ CREATE TABLE IF NOT EXISTS `events` (
   `comment` varchar(400) NOT NULL,
   `reservationDate` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `events`
 --
 
 INSERT INTO `events` (`id`, `name`, `email`, `phone`, `catEvent`, `nbPerson`, `comment`, `reservationDate`) VALUES
-(1, 'Dizet', 'midgard@gmail.com', 600000000, 'Anniversaire', 8, 'merci', '23/11/2018'),
-(2, 'test', 'midgard@gmail.com', 600000000, 'Enterrement de vie de garçon / fille', 5, 'ol', '03/10/2018'),
-(3, 'test', 'midgard@gmail.com', 600000000, 'Détente entreprise', 4, '', '29/11/2018'),
-(4, 'Dizet', 'midgard@gmail.com', 600000000, 'Enterrement de vie de garçon / fille', 6, 'On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page elle-même. ', '20/12/2018'),
-(5, 'Dizet', 'midgard@gmail.com', 600000000, 'Enterrement de vie de garçon / fille', 6, 'On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page elle-même. ', '20/12/2018');
+(8, 'Dizet', 'mid@mid.fr', 600000000, 'Enterrement de vie de garçon / fille', 6, '\r\nWell done!\r\n\r\nAww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.\r\n\r\nWhenever you need to, be sure to use margin utilities to keep things nice and tidy.\r\n', '29/11/2018'),
+(9, 'Dizet', 'mid@mid.fr', 600000000, 'Enterrement de vie de garçon / fille', 6, '\r\nWell done!\r\n\r\nAww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.\r\n\r\nWhenever you need to, be sure to use margin utilities to keep things nice and tidy.\r\n', '29/11/2018'),
+(10, 'Dizet', 'midgard@gmail.com', 600000000, 'Enterrement de vie de garçon / fille', 2, '', '21/12/2018'),
+(11, 'Dizet', 'midgard@gmail.com', 600000000, 'Détente entreprise', 4, '', '14/12/2018'),
+(12, 'test', 'mid@mid.fr', 600000000, 'Enterrement de vie de garçon / fille', 4, '', '12/12/2018'),
+(13, 'Dizet', 'midgard@gmail.com', 600000000, 'Enterrement de vie de garçon / fille', 6, '', '13/12/2018'),
+(14, 'Dizet', 'midgard@gmail.com', 600000000, 'Enterrement de vie de garçon / fille', 6, '', '13/12/2018'),
+(15, 'test', 'midgard@gmail.com', 600000000, 'Détente entreprise', 2, '', '04/12/2018'),
+(16, 'test', 'midgard@gmail.com', 600000000, 'Détente entreprise', 2, '', '04/12/2018'),
+(17, 'Dizet', 'midgard@gmail.com', 600000000, 'Détente entreprise', 4, '', '01/12/2018');
 
 -- --------------------------------------------------------
 
@@ -79,6 +84,27 @@ INSERT INTO `listdrinks` (`id`, `name`, `description`, `image`, `category`, `rem
 (16, 'Budels Malty Dark', 'Couleur brune, limpide, petit col de mousse beige. Arômes maltés. Le goût est original et gorgé de céréales, tout comme la fin de bouche. \r\nCette bière est sans alcool. 0%', 'budels-malty-0.0-dark.png', 'Sans Alcool', 1),
 (18, 'Mojito coco', 'Le mojito constitue le cocktail cubain que tout le monde adore, avec sa cousine, la caïpirinha, star brésilienne. Mais si on zappait le rhum pour le remplacer par de l\'eau de coco en glaçons et du lait de coco ? En version sans alcool, ça donne quoi ?', 'mojitococo.png', 'Sans Alcool', 0),
 (21, 'Aecht Schlenkerla Rauchbier Marzen', 'Bière à dominante douce\r\n5,1 %\r\nBrasserie Heller\r\nAllemagne\r\nIntensément fumée, boisée, amère, épicée', 'budels-malty-0.0-dark.png', 'Bière', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `message`
+--
+
+DROP TABLE IF EXISTS `message`;
+CREATE TABLE IF NOT EXISTS `message` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `comment` varchar(255) NOT NULL,
+  `creationDate` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `message`
+--
+
+INSERT INTO `message` (`id`, `comment`, `creationDate`) VALUES
+(14, 'Pensez à recommander de la kwak il n\'y en a presque plus.', '2018-11-23 11:39:16');
 
 -- --------------------------------------------------------
 
