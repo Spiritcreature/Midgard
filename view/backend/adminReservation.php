@@ -28,7 +28,7 @@ ob_start();
 					<td><?= $event->catEvent() ?></td>
 					<td><?= $event->nbPerson() ?></td>
 					<td><?= $event->comment() ?></td>
-					<td><a  class="btn btn-danger" href="index.php?action=deleteEvent&amp;id=<?= $event->id() ?>">Supprimer</a></td>
+					<td><a  class="btn btn-danger" href="index.php?action=deleteEvent&amp;id=<?= $event->id()?>#down">Supprimer</a></td>
 				</tr>
 				<?php
 					}
@@ -36,7 +36,7 @@ ob_start();
 			</tbody>
 		</table>
 	</div>
-	<div class="col-md-12"></div>
+	<div class="col-md-12" id="down"></div>
 </div>
 
 

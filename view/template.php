@@ -44,8 +44,8 @@
 <body>
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-2 left"></div>
-			<div class="col-md-8">
+			<div class="col-md-2 col-lg-2 left"></div>
+			<div class="col-sm-12 col-md-12 col-lg-8">
 				<header>
 					<nav class="navbar navbar-expand-lg navbar-dark">
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
@@ -81,15 +81,15 @@
 						</div>
 					</nav>
 				</header>
-				<section class="container-fluid">
+				<section class="container">
 					<?= $content ?>
 				</section>
 				<footer>
 					<div class="row down">
-						<div class="col-xs-12 col-md-2 text-center">
+						<div class="col-xs-12 col-sm-12 col-md-2 text-center">
 							<div class="fb-like" data-href="https://www.facebook.com/Midgard-534627433615465/" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
 						</div>
-						<div class="col-xs-12 col-md-9 text-center">© 2018 Copyright: Alexis Dizet -
+						<div class="col-xs-12 col-sm-12 col-md-9 text-center">© 2018 Copyright: Alexis Dizet -
 							<?php if (!isset($_SESSION['pseudo'])){ ?>
 							<a class="admin" href="index.php?action=authentification">Administration</a>
 							<?php } ?>
@@ -97,7 +97,7 @@
 					</div>
 				</footer>
 			</div>
-			<div class="col-md-2 right"></div>
+			<div class="col-md-2 col-lg-2 right"></div>
 		</div>
 		<!-- Optional JavaScript -->
 

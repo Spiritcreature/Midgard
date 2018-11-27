@@ -3,6 +3,7 @@ body{
 	color: #C3C1C1;
 	font-family: 'arial', cursive;
 	font-size: 16px;
+	
 }
 
 .navbar-dark{
@@ -19,7 +20,7 @@ section{
 
 .nav-menu{
 	color: #E7E7E7!important;
-	font-size: 25px;
+	font-size: 20px;
 	font-family: 'MedievalSharp', cursive;
 }
 
@@ -37,14 +38,15 @@ section{
 	color: #C99207!important;
 }
 
-.left{
+.left, .right{
 	background-image: url(../img/Wood-wallpapers.jpg);
 	background-repeat:round;
 }
 
-.right{
-	background-image: url(../img/Wood-wallpapers.jpg);
-	background-repeat:round;
+@media (max-width:768px){
+	.left, .right{
+		display:none;
+	}
 }
 
 p{
@@ -121,7 +123,7 @@ legend{
 }
 
 .carousel-warrior{
-	height: 400px;
+	max-height: 400px;
 }
 
 .fb-comments{
@@ -167,7 +169,7 @@ legend{
 	animation: fadein 1s;
 	color: #000000;
 	bottom: 120px;
-	left: 50%;
+	left: 40%;
 	height: 80px;
 	position: absolute;
 	border: 1px #FBFBFB solid;
@@ -180,7 +182,7 @@ legend{
 	animation: fadein 1s;
 	color: #000000;
 	bottom: 120px;
-	left: 50%;
+	left: 40%;
 	height: 80px;
 	position: absolute;
 	border: 1px #FBFBFB solid;
@@ -203,8 +205,11 @@ legend{
 }
 
 @media (max-width: 420px){
-	.popup-admin{
+	.popup-admin, .popup-success, .popup-wrong{
 		left: 0%;
+		width: 80%;
+		height: 100px;
+		margin-left: 32px; 
 	}
 }
 

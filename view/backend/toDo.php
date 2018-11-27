@@ -7,7 +7,7 @@ ob_start();
 		<div class="col-xs-12 col-sm-12 col-md-6">
 			<form action="index.php?action=addMessage" method="post" class="form-group" enctype="multipart/form-data">
 				<div class="form-group">
-					<label for="comment">Ajouter un pense bête :</label>
+					<label for="comment">Ecrire un pense bête :</label>
 					<textarea name="comment" id="comment" class="form-control" rows="4"></textarea>
 				</div>
 				<div class="form-group">
