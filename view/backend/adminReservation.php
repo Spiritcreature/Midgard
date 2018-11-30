@@ -4,39 +4,35 @@ ob_start();
 ?>
 
 <div class="row">
-	<div class="table-responsive-sm">
+	<?php 
+		foreach ($events as $event)
+		{ 
+	?>
+	<div class="col-md-6">
 		<table class="table">
 			<thead class="thead-dark">
-				<th scope="col">Date</th>
-				<th scope="col">Nom</th>
-				<th scope="col">Email</th>
-				<th scope="col">Téléphone</th>
-				<th scope="col">Type de réservation</th>
-				<th scope="col">Nombre de personnes</th>
-				<th scope="col">Commentaire</th>
-				<th scope="col">Supprimer</th>
+				<th scope="col">Réservation de <?= $event->name() ?></th>
 			</thead>
 			<tbody>
-				<?php foreach ($events as $event)
-					{ 
-				?>
 				<tr>
-					<td><?= $event->reservationDate() ?></td>
-					<td><?= $event->name() ?></td>
-					<td><?= $event->email() ?></td>
-					<td><?= $event->phone() ?></td>
-					<td><?= $event->catEvent() ?></td>
-					<td><?= $event->nbPerson() ?></td>
-					<td><?= $event->comment() ?></td>
-					<td><a  class="btn btn-danger" href="index.php?action=deleteEvent&amp;id=<?= $event->id()?>#down">Supprimer</a></td>
+					<td>
+						<p>Pour le : <?= $event->reservationDate() ?></p>
+						<p>Au nom de : <?= $event->name() ?></p>
+						<p>@ : <?= $event->email() ?></p>
+						<p>Tel : <?= $event->phone() ?></p>
+						<p>Pour : <?= $event->catEvent() ?></p>
+						<p>Nb personnes : <?= $event->nbPerson() ?></p>
+						<p>Commentaire : <?= $event->comment() ?></p>
+						<a  class="btn btn-danger" href="index.php?action=deleteEvent&amp;id=<?= $event->id()?>#down">Supprimer</a>
+						<a  class="btn btn-secondary" href="index.php?action=deleteEvent&amp;id=<?= $event->id()?>#down">Modifier</a>
+					</td>
 				</tr>
-				<?php
-					}
-				?>
 			</tbody>
 		</table>
 	</div>
-	<div class="col-md-12" id="down"></div>
+	<?php
+		}
+	?>
 </div>
 
 
