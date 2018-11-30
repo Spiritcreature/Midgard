@@ -41,20 +41,19 @@
 		<?= $title ?>
 	</title>
 </head>
+
 <body>
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-2 col-lg-2 left"></div>
 			<div class="col-sm-12 col-md-12 col-lg-8">
 				<header>
-					<nav class="navbar navbar-expand-lg navbar-dark">
+					<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-					
+							<span class="navbar-toggler-icon"></span>
+						</button>
 						<a href="index.php"><img class="navbar-brand" src="public/img/logo.jpg" alt="Logo du bar Midgard"></a>
 						<div class="collapse navbar-collapse justify-content-center" id="menu">
-
 							<ul class="navbar-nav nav-pills mb-3" id="pills-tab" role="tablist">
 								<li class="nav-item"><a class="nav-link nav-menu" href="index.php?action=drinks">Boissons</a>
 								</li>
@@ -65,26 +64,28 @@
 								<li class="nav-item"><a class="nav-link nav-menu" href="index.php?action=contact">Infos Pratiques</a>
 								</li>
 							</ul>
-							<?php if (isset($_SESSION['pseudo'])){ ?>
-							<ul class="navbar-nav">
-								<li class="nav-item dropdown">
-									<a class="nav-link dropdown-toggle admin-link" data-toggle="dropdown" href="" aria-haspopup="true" aria-expanded="false">Administration </a>
-									<div class="dropdown-menu">
-										<a class="dropdown-item  nav-menu" href="index.php?action=goToAdd">Ajouter</a>
-										<a class="dropdown-item  nav-menu" href="index.php?action=editMap">Remettre / Retirer</a>
-										<a class="dropdown-item  nav-menu" href="index.php?action=adminReserView">Réservation</a>
-										<a class="dropdown-item  nav-menu" href="index.php?action=toDoList">Pense bête</a>
-										<a class="dropdown-item  nav-menu" href="index.php?action=logout">Déconnexion</a>
-									</div>
-							</ul>
-							<?php } ?>
 						</div>
 					</nav>
+					<?php if (isset($_SESSION['pseudo'])){ ?>
+					<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+						<ul class="navbar-nav">
+							<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle admin-link" data-toggle="dropdown" href="" aria-haspopup="true" aria-expanded="false">Administration </a>
+							<div class="dropdown-menu">
+								<a class="dropdown-item  nav-menu" href="index.php?action=goToAdd">Ajouter</a>
+								<a class="dropdown-item  nav-menu" href="index.php?action=editMap">Remettre / Retirer</a>
+								<a class="dropdown-item  nav-menu" href="index.php?action=adminReserView">Réservation</a>
+								<a class="dropdown-item  nav-menu" href="index.php?action=toDoList">Pense bête</a>
+								<a class="dropdown-item  nav-menu" href="index.php?action=logout">Déconnexion</a>
+							</div>
+						</ul>
+					</nav>
+					<?php } ?>
 				</header>
 				<section class="container">
 					<?= $content ?>
 				</section>
-				<footer>
+				<footer class="container">
 					<div class="row down">
 						<div class="col-xs-12 col-sm-12 col-md-2 text-center">
 							<div class="fb-like" data-href="https://www.facebook.com/Midgard-534627433615465/" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
@@ -124,4 +125,5 @@
 		</script>
 	</div>
 </body>
+
 </html>

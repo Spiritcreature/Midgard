@@ -20,7 +20,7 @@ class DrinkManager extends Database
 		return $drinks;
 	}
 
-	//supprimer les boissons sélectionnées
+	//supprimer les boissons sélectionnées actuellement non utilisée.
 	public function delete($ids)
 	{	
 		$db = $this->dbConnect();
@@ -30,13 +30,18 @@ class DrinkManager extends Database
 	
 	//ajout de boisson
 	public function insertDrink($name, $description, $image, $type)
-	{		
+	{	
+		$n = htmlspecialchars($name);
+		$d = htmlspecialchars($description);
+		$i = htmlspecialchars($image);
+		$t = htmlspecialchars($type);
+		
 		$db = $this->dbConnect();
 		$del = $db->prepare('INSERT INTO listdrinks(name, description, image, category) VALUES(?, ?, ?, ?)');
-		$del->execute(array($name, $description, $image, $type));
+		$del->execute(array($n, $d, $i, $t));
 	}
 	
-	//retire de la carte les boissons selectionner
+	//retire de la carte les boissons selectionnées
 	public function remove($ids)
 	{
 		$db = $this->dbConnect();
@@ -44,6 +49,7 @@ class DrinkManager extends Database
 		$req->execute(array('id'=>$ids));
 	}
 	
+	//remet sur la carte les boissons selectionnées
 	public function resetdr($ids)
 	{
 		$db = $this->dbConnect();

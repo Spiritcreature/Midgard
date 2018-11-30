@@ -30,27 +30,35 @@ function auth(){
 }
 
 function login($login, $password){
-	$userManager = new UserManager();
-	$loginExist = $userManager->getUser($login);
+	if (empty($login && $password))
+				{
+					header ( 'Location: index.php?action=authentification');
+				}
+	else
+	{
+		$userManager = new UserManager();
+		$loginExist = $userManager->getUser($login);
 
-	if ($loginExist != false )
-    {
-        $userExist = new User($loginExist);
-		
-        if (password_verify($password, $userExist->password()) == true)
-        {
-            $_SESSION['pseudo'] = $userExist->login();
-			$_SESSION['id'] = $userExist->id();
-			header( 'Location: index.php' );
-			exit();
-			
-        }else{
-            header('Location: index.php?action=wrongUser');
-        }
-    }else{
-        header('Location: index.php?action=wrongUser');
-    }
-	require('view/frontend/authentification.php');
+		if ($loginExist != false )
+		{
+			$userExist = new User($loginExist);
+
+			if (password_verify($password, $userExist->password()) == true)
+			{
+				$_SESSION['pseudo'] = $userExist->login();
+				$_SESSION['id'] = $userExist->id();
+				header( 'Location: index.php' );
+				exit();
+
+			}else{
+				header('Location: index.php?action=wrongUser');
+			}
+		}
+		else{
+			header('Location: index.php?action=wrongUser');
+		}
+		require('view/frontend/authentification.php');
+	}
 }
 
 function logout(){

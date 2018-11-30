@@ -61,6 +61,8 @@ var Button = {
 				$('.popup-admin').hide();
 				$('.popup-wrong').hide();
 				$('.popup-success').hide();
+				$('.popup-ok-bottle').hide();
+				$('.popup-nok-bottle').hide();
 			});
 		});
 	}

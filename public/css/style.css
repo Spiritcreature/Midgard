@@ -136,6 +136,10 @@ legend{
 	border: 1px solid red;
 }
 
+.img-min{
+	height: 60px;
+}
+
 .img-bottle{
 	float: left;
 	height:110px;
@@ -169,7 +173,7 @@ legend{
 	animation: fadein 1s;
 	color: #000000;
 	bottom: 120px;
-	left: 40%;
+	left: 60%;
 	height: 80px;
 	position: absolute;
 	border: 1px #FBFBFB solid;
@@ -190,6 +194,33 @@ legend{
 	background-color: #A8F08F;
 }
 
+.popup-nok-bottle{
+	animation: fadein 1s;
+	color: #000000;
+	top: 300px;
+	left: 40%;
+	height: 80px;
+	position: absolute;
+	border: 1px #FBFBFB solid;
+	border-radius: 6px;
+	background-color: #BB2E31;
+	text-align: center;
+	z-index: 12;
+}
+
+.popup-ok-bottle{
+	animation: fadein 1s;
+	color: #000000;
+	top: 300px;
+	left: 40%;
+	height: 80px;
+	position: absolute;
+	border: 1px #FBFBFB solid;
+	border-radius: 6px;
+	background-color: #A8F08F;
+	text-align: center;
+	z-index: 12;
+}
 
 @keyframes fadein {
     from {

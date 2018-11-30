@@ -3,6 +3,25 @@ $title = "Editer la carte";
 ob_start();
 ?>
 <section>
+	<?php
+            if (isset($_SESSION['flash']) && !empty($_SESSION['flash']) )
+            {  
+				foreach ($_SESSION['flash'] as $key => $value):
+		?> 
+		<div class="popup-<?= $key ?>">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-12 text-right" id="close" >
+						<i class="fas fa-times"></i>
+						<p><?= $value ?></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<?php endforeach;
+			}
+            unset($_SESSION['flash']);
+        ?>
 	<div class="row">
 		<div class="col-xs-12 col-sm-12 col-md-6">
 			<h3>Retirer de la vente :</h3>
@@ -26,7 +45,7 @@ ob_start();
 					?>
 					<div class="form-group">
 						<input type="checkbox" id="id" name="id[]" value="<?= $drink->id() ?>">
-						<label for="drink"><abbr title="<?= $drink->description() ?>"><?= $drink->name() ?></abbr></label>
+						<label for="drink"><abbr title="<?= $drink->description() ?>"><?= $drink->name() ?> <img class="img-min" src="public/img/<?= $drink->image()?>" alt="<?= $drink->name()?>"></abbr></label>
 					</div>
 					<?php
 						}
@@ -43,7 +62,7 @@ ob_start();
 					?>
 					<div class="form-group">
 						<input type="checkbox" id="id" name="id[]" value="<?= $drink->id() ?>">
-						<label for="drink"><abbr title="<?= $drink->description() ?>"><?= $drink->name() ?></abbr></label>
+						<label for="drink"><abbr title="<?= $drink->description() ?>"><?= $drink->name() ?> <img class="img-min" src="public/img/<?= $drink->image()?>" alt="<?= $drink->name()?>"></abbr></label>
 					</div>
 					<?php
 						}
@@ -60,7 +79,7 @@ ob_start();
 					?>
 					<div class="form-group">
 						<input type="checkbox" id="id" name="id[]" value="<?= $drink->id() ?>">
-						<label for="drink"><abbr title="<?= $drink->description() ?>"><?= $drink->name() ?></abbr></label>
+						<label for="drink"><abbr title="<?= $drink->description() ?>"><?= $drink->name() ?> <img class="img-min" src="public/img/<?= $drink->image()?>" alt="<?= $drink->name()?>"></abbr></label>
 					</div>
 					<?php
 						}
@@ -94,7 +113,7 @@ ob_start();
 					?>
 					<div class="form-group">
 						<input type="checkbox" id="id" name="id[]" value="<?= $drink->id() ?>">
-						<label for="drink"><abbr title="<?= $drink->description() ?>"><?= $drink->name() ?></abbr></label>
+						<label for="drink"><abbr title="<?= $drink->description() ?>"><?= $drink->name() ?>  <img class="img-min" src="public/img/<?= $drink->image()?>" alt="<?= $drink->name()?>"></abbr></label>
 					</div>
 					<?php
 						}
@@ -111,7 +130,7 @@ ob_start();
 					?>
 					<div class="form-group">
 						<input type="checkbox" id="id" name="id[]" value="<?= $drink->id() ?>">
-						<label for="drink"><abbr title="<?= $drink->description() ?>"><?= $drink->name() ?></abbr></label>
+						<label for="drink"><abbr title="<?= $drink->description() ?>"><?= $drink->name() ?>  <img class="img-min" src="public/img/<?= $drink->image()?>" alt="<?= $drink->name()?>"></abbr></label>
 					</div>
 					<?php
 						}
@@ -128,7 +147,7 @@ ob_start();
 					?>
 					<div class="form-group">
 						<input type="checkbox" id="id" name="id[]" value="<?= $drink->id() ?>">
-						<label for="drink"><abbr title="<?= $drink->description() ?>"><?= $drink->name() ?></abbr></label>
+						<label for="drink"><abbr title="<?= $drink->description() ?>"><?= $drink->name() ?>  <img class="img-min" src="public/img/<?= $drink->image()?>" alt="<?= $drink->name()?>"></abbr></label>
 					</div>
 					<?php
 						}
