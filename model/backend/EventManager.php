@@ -40,7 +40,25 @@ class EventManager extends Database
 	public function delevent($id)
 	{
 		$db = $this->dbConnect();
-		$req = $db->prepare('DELETE FROM events WHERE id= :id');
+		$req = $db->prepare('DELETE FROM events WHERE id = :id');
 		$req->execute(array('id'=>$id));
+	}
+	
+	public function selectModifEvent($id)
+	{
+				
+		$db = $this->dbConnect();
+		$req = $db->prepare('SELECT * FROM events WHERE id = :id');
+		$req->execute(array('id'=>$id));
+		$event = $req->fetch();
+
+		return  new Event ($event);
+	}
+	
+	public function modifyEvent($id, $date,$phone, $nbPerson, $comment)		
+	{
+		$db = $this->dbConnect();
+		$req = $db->prepare('UPDATE events set reservationDate = :reservationDate, phone=:phone, nbPerson=:nbPerson, comment=:comment WHERE id= :id');
+		$req->execute(array('id'=>$id, 'reservationDate'=>$date, 'phone'=>$phone, 'nbPerson'=>$nbPerson, 'comment'=>$comment));
 	}
 }

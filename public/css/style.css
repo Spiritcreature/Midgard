@@ -16,6 +16,8 @@ section{
 
 thead, tbody{
 	border: 1px solid #FFFFFF;
+	background-color: #CCCCCC;
+	color: #000000;
 }
 .navbar-dark{
 	background-image: url(../img/wood-planks-wood-wood-texture.jpg);
@@ -46,12 +48,6 @@ thead, tbody{
 .left, .right{
 	background-image: url(../img/Wood-wallpapers.jpg);
 	background-repeat:round;
-}
-
-@media (max-width:768px){
-	.left, .right{
-		display:none;
-	}
 }
 
 p{
@@ -250,6 +246,15 @@ legend{
 }
 
 /* POPUP  */
+
+
+.modify-event{
+	background-color: #AAAAAA;
+	border: 2px #FFFFFF solid;
+	border-radius: 6px;
+	color: #000000;
+}
+
 
 footer{
 	color:#FFFFFF;

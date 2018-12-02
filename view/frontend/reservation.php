@@ -69,10 +69,8 @@
 						</div>
 						<div class="form-group col-m-5">
 							<label for="comment">Information complémentaire : </label>
-							<small id="passwordHelpBlock" class="form-text text-muted">
-								(AUTRE: Merci de préciser)
-							</small>
 							<textarea class="form-control" id="comment" name="comment" rows="4" ></textarea>
+							<small id="passwordHelpBlock" class="form-text text-muted">(AUTRE: Merci de préciser)</small>
 						</div>
 						<div class="form-group col-m-5">
 							<label for="submit"></label>

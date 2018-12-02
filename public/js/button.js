@@ -65,5 +65,5 @@ var Button = {
 				$('.popup-nok-bottle').hide();
 			});
 		});
-	}
+	},
 };

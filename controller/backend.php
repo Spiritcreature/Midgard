@@ -190,6 +190,45 @@ function delComment($id)
 	header('Location: index.php?action=toDoList');
 }
 
+function getModifyEvent($id){
+	$eventmanager = new EventManager();
+	$mEvent = $eventmanager->selectModifEvent($id);
+	
+	require('view/backend/modifyEvent.php');
+}
+
+
+function modifEvent($id, $date, $phone, $nbPerson, $comment)
+{
+	$dateNow = time();
+	$dTime= DateTime::createFromFormat('d/m/Y', $date);
+	$dateChoice = $dTime->getTimestamp();
+	
+	if ( empty( $date ) ) {
+		addMessage( 'wrong', 'Date invalide ou non remplie' );
+		header( 'Location: index.php?action=selectEvent&id=' . $_GET['id']);
+	}
+	elseif ( empty( $phone ) || !preg_match( "#^0[1-68]([-. ]?[0-9]{2}){4}$#", $phone ) ) {
+		addMessage( 'wrong', 'Format de numéro invalide' );
+		header( 'Location: index.php?action=selectEvent&id=' . $_GET['id'] );
+	}
+	elseif ( empty ($nbPerson ) ) {
+		addMessage( 'wrong', 'Vous n\'avez pas choisi le nombre de personnes' );
+		header( 'Location: index.php?action=selectEvent&id=' . $_GET['id'] );
+	}
+	elseif ( empty( $comment ) ) {
+		addMessage( 'wrong', 'Vous avez sélectionné le choix autre, merci de préciser votre demande en commentaire.' );
+		header( 'Location: index.php?action=selectEvent&id=' . $_GET['id'] );
+	}
+	else {
+		$eventmanager = new EventManager();
+		$idEvent = $eventmanager->modifyEvent($id, $date, $phone, $nbPerson, $comment);
+		addMessage( 'success', 'Votre modification a bien été prise en compte.' );
+
+		header('Location: index.php?action=adminReserView');
+	}
+}
+
 function addMessage($key,$value)
 {
 	$_SESSION['flash'][$key] = $value;

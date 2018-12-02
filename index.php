@@ -65,6 +65,12 @@ if (isset($_GET['action']) && !empty($_GET['action']))
 			case ($_GET['action'] == 'deleteComment'):
 				delComment($_GET['id']);
 				break;
+			case ($_GET['action'] == 'selectEvent'):
+				getModifyEvent($_GET['id']);
+				break;
+			case ($_GET['action'] == 'modifEvent'):
+				modifEvent($_GET['id'],$_POST['datepicker'],$_POST['phone'],$_POST['nbperson'],$_POST['comment']);
+				break;
 			default:
 				header('HTTP/1.0 404 Not Found');
 				include('view/frontend/error-404.php');

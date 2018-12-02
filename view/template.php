@@ -45,8 +45,8 @@
 <body>
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-2 col-lg-2 left"></div>
-			<div class="col-sm-12 col-md-12 col-lg-8">
+			<div class="col-lg-2 left"></div>
+			<div class="col-sm-12 col-lg-8 center">
 				<header>
 					<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
@@ -82,7 +82,7 @@
 					</nav>
 					<?php } ?>
 				</header>
-				<section class="container">
+				<section class="container test">
 					<?= $content ?>
 				</section>
 				<footer class="container">
