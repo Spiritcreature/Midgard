@@ -3,7 +3,7 @@
 	ob_start();
 	?>
 		<div class="row justify-content-center">
-			<div class="col-xs-12 col-sm-12 col-md-6">
+			<div class="col-xs-12 col-sm-12 col-md-6 add-font">
 				<form action="index.php?action=addMessage" method="post" class="form-group" enctype="multipart/form-data">
 					<div class="form-group">
 						<label for="comment">Ecrire un pense bête :</label>
@@ -18,7 +18,7 @@
 		<div class="row justify-content-center">
 			<div class="col-xs-12 col-sm-12 col-md-6">
 				<table class="table">
-					<thead>
+					<thead class="thead-dark">
 						<th scope="col">Message</th>
 						<th scope="col">Ajouté le</th>
 						<th scope="col">Supprimer</th>

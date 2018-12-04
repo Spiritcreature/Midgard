@@ -57,6 +57,7 @@ var Button = {
 	{
 		$('document').ready(function(){
 			$('.popup-admin').show();
+			setTimeout("$('.popup-admin').hide();", 4000);
 			setTimeout("$('.popup-wrong, .popup-success, .popup-ok-bottle, .popup-nok-bottle').hide();", 3000);
 			$('#close').click(function(){
 				$('.popup-admin').hide();

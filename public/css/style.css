@@ -19,6 +19,15 @@ thead, tbody{
 	background-color: #CCCCCC;
 	color: #000000;
 }
+
+a{
+	color: #6B5506;
+}
+
+a:hover{
+	color: #7C7C7C;
+}
+
 .navbar-dark{
 	background-image: url(../img/wood-planks-wood-wood-texture.jpg);
 }
@@ -82,6 +91,21 @@ legend{
 	background-color: #161616;
 }
 
+
+.add-font{
+	background-color: #585858;
+	border: 1px #393838 solid;
+	border-radius: 6px;
+}
+
+.add-font h3{
+	border-radius: 6px;
+	text-align: center;
+	background-color: #626262;
+	font-family: 'MedievalSharp', cursive;
+	color: #0E0E0E
+}
+
 .btn-default{
 	border: 1px #868684 solid;
 	background-color: #80807E;
@@ -130,7 +154,7 @@ legend{
 }
 
 .fb-comments{
-	background-color: #FDFCFC;
+	background-color: #585858;
 	border: 1px #000000 solid;
 	border-radius: 6px;
 }
@@ -192,7 +216,7 @@ legend{
 	position: absolute;
 	border: 4px #FBFBFB solid;
 	border-radius: 6px;
-	background-color: #A4A4A4;
+	background-color: #585858;
 }
 
 .popup-wrong{
@@ -379,8 +403,109 @@ legend{
     }
 }
 
+/* End Text drink */
 
 
+/* Animation Text opening time */
+
+.opening-time {
+    font-size: 20px;
+    margin: 3px 3px;
+	text-align: center;
+    border: 1px solid #585858;
+	border-radius: 6px;
+	background-color: #1A1A1A;
+	font-family: 'MedievalSharp', cursive;
+}
+
+.opening-time span {
+    display: inline-block;
+}
+
+
+.opening-time span:nth-of-type(2) {
+    animation-delay: .05s;
+}
+.opening-time span:nth-of-type(3) {
+    animation-delay: .1s;
+}
+.opening-time span:nth-of-type(4) {
+    animation-delay: .15s;
+}
+.opening-time span:nth-of-type(5) {
+    animation-delay: .2s;
+}
+.opening-time span:nth-of-type(6) {
+    animation-delay: .25s;
+}
+.opening-time span:nth-of-type(7) {
+    animation-delay: .3s;
+}
+.opening-time span:nth-of-type(8) {
+    animation-delay: .35s;
+}
+.opening-time span:nth-of-type(9) {
+    animation-delay: .4s;
+}
+.opening-time span:nth-of-type(10) {
+    animation-delay: .45s;
+}
+.opening-time span:nth-of-type(11) {
+    animation-delay: .5s;
+}
+.opening-time span:nth-of-type(12) {
+    animation-delay: .55s;
+}
+.opening-time span:nth-of-type(13) {
+    animation-delay: .6s;
+}
+.opening-time span:nth-of-type(14) {
+    animation-delay: .65s;
+}
+.opening-time span:nth-of-type(15) {
+    animation-delay: .7s;
+}
+.opening-time span:nth-of-type(16) {
+    animation-delay: .75s;
+}
+.opening-time span:nth-of-type(17) {
+    animation-delay: .8s;
+}
+.opening-time span:nth-of-type(18) {
+    animation-delay: .85s;
+}
+.opening-time span:nth-of-type(19) {
+    animation-delay: .9s;
+}
+.opening-time span:nth-of-type(20) {
+    animation-delay: .95s;
+}
+
+
+.four span {
+    color: #BBBBBB;
+    opacity: 0;
+    transform: translate(0, -100px) rotate(360deg) scale(0);
+    animation: revolveDrop .3s forwards;
+}
+
+
+@keyframes revolveDrop {
+    30% {
+        transform: translate(0, -50px) rotate(180deg) scale(1);
+    }
+
+    60% {
+        transform: translate(0, 20px) scale(.8) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(0) scale(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+/* End animation opening time */
 
 
 footer{

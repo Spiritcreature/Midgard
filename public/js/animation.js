@@ -9,8 +9,4 @@ var Animation = {
 			interval: 3000
 		});
 	},
-	
-	animTextDrink: function(){
-		
-	},
 };

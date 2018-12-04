@@ -50,13 +50,16 @@ if ( isset( $_SESSION[ 'pseudo' ] ) ) {
 					<i class="fas fa-times"></i>
 				</div>
 				<div class="col-md-12 text-center">
-					<h4>Vous êtes connecté en administrateur.</h4>
+					<div class="animate four">
+						<span>B</span><span>i</span><span>e</span><span>n</span><span>v</span><span>e</span><span>n</span><span>u</span><span>e</span> &nbsp;
+						<span>a</span><span>d</span><span>m</span><span>i</span><span>n</span><span>i</span><span>s</span><span>t</span><span>r</span><span>a</span><span>t</span><span>e</span><span>u</span><span>r</span><span>.</span>
+					</div>
 				</div>
 			</div>
 			<div class="row justify-content-center">
 				<div class="col-md-8 text-center">
 					<table class="table">
-						<thead>
+						<thead class="thead-dark">
 							<th scope="col">Message du jour</th>
 						</thead>
 						<tbody>

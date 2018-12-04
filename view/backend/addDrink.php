@@ -3,8 +3,8 @@ $title = "Ajouter une boisson";
 ob_start();
 ?>
 	<div class="row justify-content-center">
-		<div class="col-xs-12 col-sm-12 col-md-6">
-			<h3>Ajouter une boisson à la carte : </h3>
+		<div class="col-xs-12 col-sm-12 col-md-6 add-font">
+			<h3>Ajouter une boisson à la carte</h3>
 			<form action="index.php?action=addDrink#cat" method="post" class="form-group" enctype="multipart/form-data">
 				<div class="form-group">
 					<label for="name">Nom de la boisson :</label>
