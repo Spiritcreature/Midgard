@@ -44,7 +44,7 @@
 if ( isset( $_SESSION[ 'pseudo' ] ) ) {
 ?>
 	<div class="col-md-8 popup-admin">
-		<div class="container">
+		<div class="container-popup">
 			<div class="row">
 				<div class="col-md-12 text-right" id="close" >
 					<i class="fas fa-times"></i>

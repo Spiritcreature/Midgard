@@ -92,9 +92,7 @@
 						<div class="col-xs-12 col-sm-12 col-md-2 text-center">
 							<div class="fb-like" data-href="https://www.facebook.com/Midgard-534627433615465/" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
 						</div>
-						<div class="col-xs-12 col-sm-12 col-md-8 text-center">
-							© 2018 Copyright: Alexis Dizet
-						</div>
+						<div class="col-xs-12 col-sm-12 col-md-8 text-center">© 2018 Copyright: Alexis Dizet</div>
 					</div>
 				</footer>
 			</div>

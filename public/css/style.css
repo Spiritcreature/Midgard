@@ -36,7 +36,7 @@ a:hover{
 
 .nav-menu{
 	color: #E7E7E7!important;
-	font-size: 20px;
+	font-size: 25px;
 	font-family: 'MedievalSharp', cursive;
 }
 
@@ -212,12 +212,14 @@ legend{
 	color: #000000;
 	top: 340px;
 	left: 16%;
-	min-height: 400px;
+	height: auto;
 	position: absolute;
 	border: 4px #FBFBFB solid;
 	border-radius: 6px;
 	background-color: #585858;
 }
+
+
 
 .popup-wrong{
 	animation: fadein 1s;
