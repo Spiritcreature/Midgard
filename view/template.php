@@ -82,8 +82,10 @@
 					</nav>
 					<?php } ?>
 				</header>
-				<section class="container test">
-					<?= $content ?>
+				<section>
+					<div class="container">
+						<?= $content ?>
+					</div>
 				</section>
 				<footer class="container">
 					<div class="row down">
@@ -98,7 +100,7 @@
 					</div>
 				</footer>
 			</div>
-			<div class="col-md-2 col-lg-2 right"></div>
+			<div class="col-lg-2 right"></div>
 		</div>
 		<!-- Optional JavaScript -->
 
@@ -110,6 +112,7 @@
 		<script src="public/js/appinit.js"></script>
 		<script src="public/js/button.js"></script>
 		<script src="public/js/datepicker.js"></script>
+		<script src="public/js/carousel.js"></script>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

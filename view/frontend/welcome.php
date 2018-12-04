@@ -5,8 +5,8 @@
 
 	<div class="row justify-content-center">
 		<div class="col-md-10">
-			<p>Ohhh vous nobles combatants perdus devant les portes du <strong>Midgard</strong>, vous vous situez dans la ville de <strong>Troyes</strong> unique en sont genre et chargée d'histoire d'un autre temps. Vous aimez cette ville ça tombe bien nous aussi ! Troyes et son architecture moyenâgeuse offrent un cadre atipique, parfait pour accueillir les portes du <b>Midgard.</b></p>
-			<p>Vous avez combattu toute la journée ? Vous avez quitté votre champ de bataille ? Marre de tous ces guerriers qui font sonner le fer de leurs armes ? Rendez-vous dans les terres du mileu du <b>Midgard</b>. Où l'odeur du bois et des épices combleront vos sens, dans cette taverne ou la bonne hummeur et l'allégresse coulent à flot. Vous pourrez vous détendre et vous réunir autour d'une bonne chope de <strong>bière</strong>, d'<strong>hypocras</strong>, d'<strong>hydromel</strong> et d'autres liquides dont plusieurs <strong>guerriers</strong> en ont perdu la raison. Ôhhh vous fier guerriers venez si vous l'osez passer les portes du Midgard et vous'attablez avec vos compagnons d'armes. Nous vous attendons de pied ferme et au contraire de vos ennemies, nous leverons nos cornes remplies de doux breuvage pour fêter votre victoire.</p>
+			<p>Ôhhh vous nobles combattants perdus devant les portes du <strong>Midgard</strong>, vous vous situez dans la ville de <strong>Troyes</strong> unique en son genre et chargée d'histoire d'un autre temps. Vous aimez cette ville ça tombe bien nous aussi ! Troyes et son architecture moyenâgeuse offrent un cadre atypique, parfait pour accueillir les portes du <em>Midgard.</em>
+			<p>Vous avez combattu toute la journée ? Vous avez quitté votre champ de bataille ? Marre de tous ces guerriers qui font sonner le fer de leurs armes ? Rendez-vous dans les terres du milieu du <em>Midgard</em>. Où l'odeur du bois et des épices combleront vos sens, dans cette taverne ou la bonne humeur et l'allégresse coulent à flot. Vous pourrez vous détendre et vous réunir autour d'une bonne chope de <strong>bière</strong>, d'<strong>hypocras</strong>, d'<strong>hydromel</strong> et d'autres liquides dont plusieurs <strong>guerriers</strong> en ont perdu la raison. Ôhhh vous fier guerriers venez si vous l'osez passer les portes du Midgard et vous attablez avec vos compagnons d'armes. Nous vous attendons de pied ferme et au contraire de vos ennemies, nous lèverons nos cornes remplies de doux breuvage pour fêter votre victoire.</p>
 		</div>
 	</div>
 	<div class="row justify-content-center">
@@ -28,6 +28,14 @@
 						<img class="d-block w-100" src="public/img/cocktail.jpg" alt="Third slide">
 					</div>
 				</div>
+				<a class="carousel-control-prev" href="#carouselwelcome" role="button" data-slide="prev" >
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href ="#carouselwelcome" role="button" data-slide="next" >
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
 			</div>			
 		</div>
 	</div>

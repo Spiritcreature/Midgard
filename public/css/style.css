@@ -71,6 +71,7 @@ fieldset{
 	padding: 10px;
 	border: 1px #FFFFFF solid;
 	border-radius: 6px;
+	background-color: #161616;
 }
 
 legend{
@@ -78,6 +79,7 @@ legend{
 	border: 1px #FFFFFF solid;
 	border-radius: 6px;
 	padding-left: 5px;
+	background-color: #161616;
 }
 
 .btn-default{
@@ -260,5 +262,3 @@ footer{
 	color:#FFFFFF;
 	background-color:rgba(0,0,0,0.77);
 }
-
-

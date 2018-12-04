@@ -20,8 +20,7 @@
 			</div>
 		</div>
 		<div class="col-xs-12 col-md-12">
-			<div class="fb-page" data-href="https://www.facebook.com/alexis.dizet" data-tabs="timeline" data-width="300" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
-			<div class="fb-comments" data-href="https://www.facebook.com/Midgard-534627433615465/" data-numposts="5" data-colorscheme="dark"></div>
+			<div class="fb-comments" data-href="https://www.facebook.com/Midgard-534627433615465/" data-width="100%" data-numposts="5" data-colorscheme="dark"></div>
 		</div>
 	<?php
 

@@ -55,10 +55,16 @@ class EventManager extends Database
 		return  new Event ($event);
 	}
 	
-	public function modifyEvent($id, $date,$phone, $nbPerson, $comment)		
+	public function modifyEvent($id, $date,$phone, $nbPerson, $comment)
 	{
+		$newId = $id;
+		$newDate = $date;
+		$newPhone = $phone;
+		$newNbPerson= $nbPerson;
+		$newComment = $comment;
+		
 		$db = $this->dbConnect();
 		$req = $db->prepare('UPDATE events set reservationDate = :reservationDate, phone=:phone, nbPerson=:nbPerson, comment=:comment WHERE id= :id');
-		$req->execute(array('id'=>$id, 'reservationDate'=>$date, 'phone'=>$phone, 'nbPerson'=>$nbPerson, 'comment'=>$comment));
+		$req->execute(array('id'=>$newId, 'reservationDate'=>$newDate, 'phone'=>$newPhone, 'nbPerson'=>$newNbPerson, 'comment'=>$newComment));
 	}
 }
