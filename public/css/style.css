@@ -144,9 +144,7 @@ legend{
 }
 
 .img-bottle{
-	float: left;
-	height:110px;
-	margin-right: 8px;
+	height: 180px;
 }
 
 .row-choice{
@@ -156,6 +154,31 @@ legend{
 #form-alcohol-free-rem, #form-beer-rem, #form-beer-res, #form-alcohol-free-res{
 	display: none;
 }
+
+.bg-color{
+	background-color: #1F1F1F;
+}
+
+.card-header{
+	background-color: #1A1A1A;
+	border: 1px solid #FFFFFF;
+}
+
+.card{
+	border: 1px solid #585858;
+	margin: 0 5px;
+}
+
+.title-drink{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.card-text{
+	text-align:inherit;
+}
+
+
 
 /* POPUP  */
 
@@ -256,6 +279,108 @@ legend{
 	border-radius: 6px;
 	color: #000000;
 }
+
+
+/* Animation Text Drink */
+
+.animate {
+    font-size: 50px;
+    margin: 30px 0 0;
+    border: 1px solid #585858;
+	border-radius: 6px;
+	background-color: #1A1A1A;
+	font-family: 'MedievalSharp', cursive;
+}
+
+.animate span {
+    display: inline-block;
+}
+
+
+.animate span:nth-of-type(2) {
+    animation-delay: .05s;
+}
+.animate span:nth-of-type(3) {
+    animation-delay: .1s;
+}
+.animate span:nth-of-type(4) {
+    animation-delay: .15s;
+}
+.animate span:nth-of-type(5) {
+    animation-delay: .2s;
+}
+.animate span:nth-of-type(6) {
+    animation-delay: .25s;
+}
+.animate span:nth-of-type(7) {
+    animation-delay: .3s;
+}
+.animate span:nth-of-type(8) {
+    animation-delay: .35s;
+}
+.animate span:nth-of-type(9) {
+    animation-delay: .4s;
+}
+.animate span:nth-of-type(10) {
+    animation-delay: .45s;
+}
+.animate span:nth-of-type(11) {
+    animation-delay: .5s;
+}
+.animate span:nth-of-type(12) {
+    animation-delay: .55s;
+}
+.animate span:nth-of-type(13) {
+    animation-delay: .6s;
+}
+.animate span:nth-of-type(14) {
+    animation-delay: .65s;
+}
+.animate span:nth-of-type(15) {
+    animation-delay: .7s;
+}
+.animate span:nth-of-type(16) {
+    animation-delay: .75s;
+}
+.animate span:nth-of-type(17) {
+    animation-delay: .8s;
+}
+.animate span:nth-of-type(18) {
+    animation-delay: .85s;
+}
+.animate span:nth-of-type(19) {
+    animation-delay: .9s;
+}
+.animate span:nth-of-type(20) {
+    animation-delay: .95s;
+}
+
+
+.four span {
+    color: #BBBBBB;
+    opacity: 0;
+    transform: translate(0, -100px) rotate(360deg) scale(0);
+    animation: revolveDrop .3s forwards;
+}
+
+
+@keyframes revolveDrop {
+    30% {
+        transform: translate(0, -50px) rotate(180deg) scale(1);
+    }
+
+    60% {
+        transform: translate(0, 20px) scale(.8) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(0) scale(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+
+
 
 
 footer{

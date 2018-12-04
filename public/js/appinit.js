@@ -4,6 +4,6 @@ $(function () {
 	button.init();
 	var datepicker = Object.create(Datepicker);
 	datepicker.init();
-	var carousel = Object.create(Carousel);
-	carousel.init();
+	var animation = Object.create(Animation);
+	animation.init();
 });
