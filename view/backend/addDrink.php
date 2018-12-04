@@ -2,6 +2,7 @@
 $title = "Ajouter une boisson";
 ob_start();
 ?>
+<?php if (isset($_SESSION['pseudo'])){ ?>
 	<div class="row justify-content-center">
 		<div class="col-xs-12 col-sm-12 col-md-6 add-font">
 			<h3>Ajouter une boisson à la carte</h3>
@@ -57,7 +58,9 @@ ob_start();
 	?>
 
 <?php
-
+}else {
+	header('Location: index.php?action=authentification');
+}
 $content = ob_get_clean();
 require( 'view/template.php' );
 ?>

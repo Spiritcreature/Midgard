@@ -1,6 +1,7 @@
 <?php
 $title = "Gestion des réservations";
 ob_start();
+if (isset($_SESSION['pseudo'])){
 	if (isset($_SESSION['flash']) && !empty($_SESSION['flash']) )
 	{  
 		foreach ($_SESSION['flash'] as $key => $value):
@@ -55,7 +56,9 @@ ob_start();
 <div id="down"></div>
 
 <?php
-
+}else {
+	header('Location: index.php?action=authentification');
+}
 $content = ob_get_clean();
 require( 'view/template.php' );
 ?>

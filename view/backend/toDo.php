@@ -1,6 +1,7 @@
 	<?php
 	$title = "Ajouter un pense bête";
 	ob_start();
+	if (isset($_SESSION['pseudo'])){ 
 	?>
 		<div class="row justify-content-center">
 			<div class="col-xs-12 col-sm-12 col-md-6 add-font">
@@ -41,7 +42,9 @@
 			</div>
 		</div>
 	<?php
-
+	}else {
+	header('Location: index.php?action=authentification');
+	}
 	$content = ob_get_clean();
 	require( 'view/template.php' );
 	?>

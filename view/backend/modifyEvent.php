@@ -1,6 +1,7 @@
 <?php
 $title = "Gestion des réservations";
 ob_start();
+if (isset($_SESSION['pseudo'])){ 
 ?>
 
 <div class="row justify-content-center">
@@ -55,6 +56,9 @@ ob_start();
 ?>
 
 <?php
+}else {
+	header('Location: index.php?action=authentification');
+}
 $content = ob_get_clean();
 require( 'view/template.php' );
 ?>

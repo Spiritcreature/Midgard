@@ -55,7 +55,7 @@
 						<a href="index.php"><img class="navbar-brand" src="public/img/logo.jpg" alt="Logo du bar Midgard"></a>
 						<div class="collapse navbar-collapse justify-content-center" id="menu">
 							<ul class="navbar-nav nav-pills mb-3" id="pills-tab" role="tablist">
-								<li class="nav-item"><a class="nav-link nav-menu" href="index.php?action=drinks">Boissons</a>
+								<li class="nav-item"><a class="nav-link nav-menu" href="index.php?action=drinks">La carte</a>
 								</li>
 								<li class="nav-item"><a class="nav-link nav-menu" href="index.php?action=actu">Nos Guerriers</a>
 								</li>
@@ -87,15 +87,13 @@
 						<?= $content ?>
 					</div>
 				</section>
-				<footer class="container">
+				<footer class="container-fluid">
 					<div class="row down">
 						<div class="col-xs-12 col-sm-12 col-md-2 text-center">
 							<div class="fb-like" data-href="https://www.facebook.com/Midgard-534627433615465/" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
 						</div>
-						<div class="col-xs-12 col-sm-12 col-md-9 text-center">© 2018 Copyright: Alexis Dizet -
-							<?php if (!isset($_SESSION['pseudo'])){ ?>
-							<a class="admin" href="index.php?action=authentification">Administration</a>
-							<?php } ?>
+						<div class="col-xs-12 col-sm-12 col-md-8 text-center">
+							© 2018 Copyright: Alexis Dizet
 						</div>
 					</div>
 				</footer>
