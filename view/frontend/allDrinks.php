@@ -3,9 +3,11 @@
 		ob_start(); 
 	?>
 		<div class="row justify-content-center">
-			<div class="col-md-8 text-center title-drink">
+			<div class="col-md-9 col-lg-8 text-center title-drink">
 				<div class="animate four">
-					<span>B</span><span>o</span><span>i</span><span>s</span><span>s</span><span>o</span><span>n</span><span>s</span> &nbsp;
+					<div class="br"><p></div>
+						<span>B</span><span>o</span><span>i</span><span>s</span><span>s</span><span>o</span><span>n</span><span>s</span>
+					<div class="br"></p></div>
 					<span>M</span><span>é</span><span>d</span><span>i</span><span>é</span><span>v</span><span>a</span><span>l</span><span>e</span><span>s</span>
 				</div>
 			</div>
@@ -24,7 +26,7 @@
 			<?php }} ?>
 		</div>
 		<div class="row justify-content-center">
-			<div class="col-md-8 text-center title-drink">
+			<div class="col-md-9 col-lg-8 text-center title-drink">
 				<div class="animate four">
 					<span>B</span><span>i</span><span>è</span><span>r</span><span>e</span><span>s</span>
 				</div>
@@ -46,9 +48,9 @@
 			
 		</div>
 		<div class="row justify-content-center">
-			<div class="col-md-8 text-center title-drink">
+			<div class="col-md-9 col-lg-8 text-center title-drink">
 				<div class="animate four">
-					<span>S</span><span>a</span><span>n</span><span>s</span> &nbsp;
+					<span>S</span><span>a</span><span>n</span><span>s</span>
 					<span>A</span><span>l</span><span>c</span><span>o</span><span>o</span><span>l</span>
 				</div>
 			</div>

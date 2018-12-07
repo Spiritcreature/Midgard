@@ -45,7 +45,7 @@
 <body>
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-lg-2 left"></div>
+			<div class="col-sm-12 col-lg-2 left"></div>
 			<div class="col-sm-12 col-lg-8 center">
 				<header>
 					<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -96,7 +96,7 @@
 					</div>
 				</footer>
 			</div>
-			<div class="col-lg-2 right"></div>
+			<div class="col-sm-12 col-lg-2 right"></div>
 		</div>
 		<!-- Optional JavaScript -->
 

@@ -16,33 +16,27 @@
 				</form>
 			</div>
 		</div>
+	<?php foreach ( $listComments as $comment ) {?>
 		<div class="row justify-content-center">
-			<div class="col-xs-12 col-sm-12 col-md-6">
+			<div class="col-md-6">
 				<table class="table">
 					<thead class="thead-dark">
-						<th scope="col">Message</th>
-						<th scope="col">Ajouté le</th>
-						<th scope="col">Supprimer</th>
+						<th scope="col">Commentaire</th>
 					</thead>
 					<tbody>
-						<?php
-							foreach($listComments as $comment)
-							{
-						?>
 						<tr>
-							<td><?= $comment->comment() ?></td>
-							<td> <?= $comment->creationDate() ?></td>
-							<td><a  class="btn btn-danger" href="index.php?action=deleteComment&amp;id=<?= $comment->id() ?>">Supprimer</a></td>
+							<td>
+								<p>Ajouté le : <?= $comment->creationDate() ?></p>
+								<p><?= $comment->comment() ?></p>
+								<a class="btn btn-danger" href="index.php?action=deleteComment&amp;id=<?= $comment->id() ?>">Supprimer</a>
+							</td>
 						</tr>
-						<?php 
-							}
-						?>
 					</tbody>
 				</table>
 			</div>
 		</div>
 	<?php
-	}else {
+	}}else {
 	header('Location: index.php?action=authentification');
 	}
 	$content = ob_get_clean();

@@ -1,5 +1,7 @@
 <?php
 
+namespace Dizet\Midgard\Model;
+
 class User{
 	
 	private $_id;

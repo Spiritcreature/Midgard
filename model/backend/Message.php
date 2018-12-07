@@ -1,5 +1,7 @@
 <?php
 
+namespace Dizet\Midgard\Model;
+
 class Message{
 	
 	private $_id;

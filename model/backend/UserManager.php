@@ -1,5 +1,11 @@
 <?php
 
+namespace Dizet\Midgard\Model;
+
+use \Dizet\Midgard\Model\Database;
+use \Dizet\Midgard\Model\User;
+use \PDO;
+
 require_once('model/Database.php');
 require_once('model/backend/User.php');
 

@@ -1,5 +1,9 @@
 <?php
 
+namespace Dizet\Midgard\Model;
+
+use PDO;
+
 class Database
 {
 	

@@ -1,7 +1,7 @@
 body{
 	background-image: url(../img/wood-planks-wood-wood-texture.jpg);
 	color: #C3C1C1;
-	font-family: 'arial', cursive;
+	font-family: 'MedievalSharp', cursive;
 	font-size: 16px;
 	
 }
@@ -32,8 +32,6 @@ a:hover{
 	background-image: url(../img/wood-planks-wood-wood-texture.jpg);
 }
 
-
-
 .nav-menu{
 	color: #E7E7E7!important;
 	font-size: 25px;
@@ -63,6 +61,15 @@ p{
 	text-align: justify;
 }
 
+.br{
+	display: none;
+}
+
+@media (max-width: 420px){
+	.br{
+		display: block;
+	}
+}
 
 header{
 	margin-top: 20px;
@@ -184,7 +191,7 @@ legend{
 }
 
 .card-header{
-	background-color: #1A1A1A;
+	background-color: #191919;
 	border: 1px solid #FFFFFF;
 }
 
@@ -219,14 +226,18 @@ legend{
 	background-color: #585858;
 }
 
-
+@media (max-width:420px){
+	.popup-admin{
+		height: auto!important;
+	}
+}
 
 .popup-wrong{
 	animation: fadein 1s;
 	color: #000000;
 	bottom: 120px;
-	left: 60%;
-	height: 80px;
+	left: 40%;
+	width: 300px;
 	position: absolute;
 	border: 1px #FBFBFB solid;
 	border-radius: 6px;
@@ -237,13 +248,25 @@ legend{
 .popup-success{
 	animation: fadein 1s;
 	color: #000000;
-	bottom: 120px;
+	top: 220px;
 	left: 40%;
 	height: 80px;
 	position: absolute;
 	border: 1px #FBFBFB solid;
 	border-radius: 6px;
 	background-color: #A8F08F;
+}
+
+.popup-success-event{
+	animation: fadein 1s;
+	color: #000000;
+	height: 80px;
+	margin: 0 auto!important;
+	position: absolute;
+	border: 1px #FBFBFB solid;
+	border-radius: 6px;
+	background-color: #A8F08F;
+	z-index: 55!important;
 }
 
 .popup-nok-bottle{
@@ -314,7 +337,7 @@ legend{
     margin: 30px 0 0;
     border: 1px solid #585858;
 	border-radius: 6px;
-	background-color: #1A1A1A;
+	background-image: url(../img/Wood-wallpapers.jpg);
 	font-family: 'MedievalSharp', cursive;
 }
 

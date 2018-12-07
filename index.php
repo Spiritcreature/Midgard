@@ -1,7 +1,11 @@
 <?php
 session_start();
-require('controller/frontend.php');
-require('controller/backend.php');
+
+use Dizet\Midgard\Controller\FrontController;
+use Dizet\Midgard\Controller\BackController;
+use Dizet\Midgard\Model\Autoloader;
+
+Autoloader::register();
 
 
 if (isset($_GET['action']) && !empty($_GET['action']))
@@ -9,67 +13,86 @@ if (isset($_GET['action']) && !empty($_GET['action']))
 		switch ($_GET['action'])
 		{
 			case ($_GET['action'] == 'drinks'):
-				drinks();
+				$frontController = new FrontController();
+				$drink = $frontController->drinks();
 				break;
 			case ($_GET['action'] == 'actu'):
 				require('view/frontend/avis.php');
 				break;
 			case ($_GET['action'] == 'reservations'):
-				require('view/frontend/reservation.php');
+				$frontController = new FrontController();
+				$reservation = $frontController->reservation();
 				break;
 			case ($_GET['action'] == 'contact'):
-				contact();
+				$frontController = new FrontController();
+				$contact = $frontController->contact();
 				break;
 			case ($_GET['action'] == 'authentification'):
-				auth();
+				$frontController = new FrontController();
+				$auth = $frontController->auth();
 				break;
 			case ($_GET['action'] == 'wrongUser'):
-				require('view/frontend/wrongUser.php');
+				$frontController = new FrontController();
+				$wrongUser = $frontController->wrongUser();
 				break;
 			case ($_GET['action'] == 'login'):
-				login($_POST['login'],$_POST['password']);
+				$frontController = new FrontController();
+				$login = $frontController->login($_POST['login'],$_POST['password']);
 				break;
 			case ($_GET['action'] == 'logout'):
-				logout();
+				$frontController = new FrontController();
+				$logout = $frontController->logout();
 				break;
 			case ($_GET['action'] == 'goToAdd'):
 				require('view/backend/addDrink.php');
 				break;
 			case ($_GET['action'] == 'editMap'):
-				editMap();
+				$backController = new BackController();
+				$editMap = $backController->editMap();
 				break;
 			case ($_GET['action'] == 'remove'):
-					removeDrink($_POST['id']);
+				$backController = new BackController();
+				$remove = $backController->removeDrink($_POST['id']);
 				break;
 			case ($_GET['action'] == 'reset'):
-					resetDrink($_POST['id']);
+				$backController = new BackController();
+				$reset = $backController->resetDrink($_POST['id']);
 				break;
 			case ($_GET['action'] == 'addDrink'):
-					addDrink($_POST['name'], $_POST['desc'], $_FILES['image']['name'],$_POST['cat'],$_FILES['image']['error'],$_FILES['image']['tmp_name'], $_FILES['image']['size']);
+				$backController = new BackController();
+				$addDrink = $backController->addDrink($_POST['name'], $_POST['desc'], $_FILES['image']['name'],$_POST['cat'],$_FILES['image']['error'],$_FILES['image']['tmp_name'], $_FILES['image']['size']);
 				break;
 			case ($_GET['action'] == 'addEvent'):
-					addEvent($_POST['name'], $_POST['phone'], $_POST['mail'], $_POST['category'], $_POST['nbperson'], $_POST['comment'], $_POST['datepicker']);
+				$backController = new BackController();
+				$addEvent = $backController->addEvent($_POST['name'], $_POST['phone'], $_POST['mail'], $_POST['category'], $_POST['nbperson'], $_POST['comment'], $_POST['datepicker']);
 				break;
 			case ($_GET['action'] == 'adminReserView'):
-				adminReservation();
+				$backController = new BackController();
+				$adminReservation = $backController->adminReservation();
 				break;
 			case ($_GET['action'] == 'deleteEvent'):
-				deleteEvent($_GET['id']);
+				$backController = new BackController();
+				$deleteEvent = $backController->deleteEvent($_GET['id']);
 				break;
 			case ($_GET['action'] == 'toDoList'):
-				getComment();
+				$backController = new BackController();
+				$message = $backController->getComment();
 				break;
 			case ($_GET['action'] == 'addMessage'):
-				newComment($_POST['comment']);
+				$backController = new BackController();
+				$addMessage = $backController->newComment($_POST['comment']);
 				break;
 			case ($_GET['action'] == 'deleteComment'):
-				delComment($_GET['id']);
+				$backController = new BackController();
+				$deleteComment = $backController->delComment($_GET['id']);
 				break;
 			case ($_GET['action'] == 'selectEvent'):
-				getModifyEvent($_GET['id']);
+				$backController = new BackController();
+				$selectEvent = $backController->getModifyEvent($_GET['id']);
 				break;
 			case ($_GET['action'] == 'modifEvent'):
-				modifEvent($_GET['id'],$_POST['datepicker'],$_POST['phone'],$_POST['nbperson'],$_POST['comment']);
+				$backController = new BackController();
+				$modifEvent = $backController->modifEvent($_GET['id'],$_POST['datepicker'],$_POST['phone'],$_POST['nbperson'],$_POST['comment']);
 				break;
 			default:
 				header('HTTP/1.0 404 Not Found');
@@ -79,7 +102,8 @@ if (isset($_GET['action']) && !empty($_GET['action']))
 	}
 	else
 	{
-		welcome();
+		$frontController= new FrontController();
+		$index = $frontController->welcome();
 	}
 
 

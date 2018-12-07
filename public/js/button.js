@@ -58,13 +58,14 @@ var Button = {
 		$('document').ready(function(){
 			$('.popup-admin').show();
 			setTimeout("$('.popup-admin').hide();", 5000);
-			setTimeout("$('.popup-wrong, .popup-success, .popup-ok-bottle, .popup-nok-bottle').hide();", 3000);
+			setTimeout("$('.popup-wrong, .popup-success, .popup-ok-bottle, .popup-nok-bottle, .popup-success-event').hide();", 3000);
 			$('#close').click(function(){
 				$('.popup-admin').hide();
 				$('.popup-wrong').hide();
 				$('.popup-success').hide();
 				$('.popup-ok-bottle').hide();
 				$('.popup-nok-bottle').hide();
+				$('.popup-success-event').hide();
 			});
 		});
 	},
