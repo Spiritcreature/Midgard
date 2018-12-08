@@ -5,7 +5,7 @@ use Controller\FrontController;
 use Controller\BackController;
 use Model\Autoloader;
 
-require_once('model/autoload.php');
+require_once('Model/Autoload.php');
 Autoloader::register();
 
 
@@ -18,7 +18,7 @@ if (isset($_GET['action']) && !empty($_GET['action']))
 				$drink = $frontController->drinks();
 				break;
 			case ($_GET['action'] == 'actu'):
-				require('view/frontend/avis.php');
+				require('View/Frontend/avis.php');
 				break;
 			case ($_GET['action'] == 'reservations'):
 				$frontController = new FrontController();
@@ -45,7 +45,7 @@ if (isset($_GET['action']) && !empty($_GET['action']))
 				$logout = $frontController->logout();
 				break;
 			case ($_GET['action'] == 'goToAdd'):
-				require('view/backend/addDrink.php');
+				require('View/Backend/addDrink.php');
 				break;
 			case ($_GET['action'] == 'editMap'):
 				$backController = new BackController();

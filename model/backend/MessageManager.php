@@ -9,12 +9,12 @@ use Model\Backend\Message;
 use Model\Autoloader;
 use \PDO;
 
-require_once('model/autoload.php');
+require_once('Model/Autoload.php');
 Autoloader::register();
 
 
 
-class MessageManager extends Database
+class MessageManager extends \Database
 {
 	
 	public function addComment($comment)

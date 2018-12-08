@@ -9,7 +9,7 @@ use Model\Autoloader;
 use \DateTime;
 
 // Chargement des classes
-require_once('model/autoload.php');
+require_once('Model/Autoload.php');
 Autoloader::register();
 
 
@@ -20,7 +20,7 @@ class BackController {
 		$drinksmanager = new DrinkManager();
 		$allDrinks = $drinksmanager->getDrinks();
 
-		require('view/backend/editDrinks.php');
+		require('View/Backend/editDrinks.php');
 	}
 
 	public function removeDrink($id)
@@ -125,7 +125,7 @@ class BackController {
 			$result = $backController->addMessage( 'success', 'Boisson ajoutée à la carte.' );
 
 
-			require( 'view/backend/addDrink.php' );
+			require( 'View/Backend/addDrink.php' );
 		}
 	}
 
@@ -137,45 +137,45 @@ class BackController {
 
 		if ( empty( $date ) || $dateNow >= $dateChoice ) {
 			$backController = new BackController();
-			$result = $backController->addMessage( 'wrong', 'Date invalide ou non remplie' );
+			$result = $backController->addMessage( 'wrong-event', 'Date invalide ou non remplie' );
 			header( 'Location: index.php?action=reservations' );
 		} elseif ( empty( $name ) ) {
 			$backController = new BackController();
-			$result = $backController->addMessage( 'wrong', 'Merci de renseigner votre nom' );
+			$result = $backController->addMessage( 'wrong-event', 'Merci de renseigner votre nom' );
 			header( 'Location: index.php?action=reservations' );
 		}
 		elseif ( empty( $phone ) || !preg_match( "#^0[1-68]([-. ]?[0-9]{2}){4}$#", $phone ) ) {
 			$backController = new BackController();
-			$result = $backController->addMessage( 'wrong', 'Format de numéro invalide' );
+			$result = $backController->addMessage( 'wrong-event', 'Format de numéro invalide' );
 			header( 'Location: index.php?action=reservations' );
 		}
 		elseif ( empty( $mail ) || !preg_match( "#^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$#", $mail ) ) {
 			$backController = new BackController();
-			$result = $backController->addMessage( 'wrong', 'Adresse mail non valide' );
+			$result = $backController->addMessage( 'wrong-event', 'Adresse mail non valide' );
 			header( 'Location: index.php?action=reservations' );
 		}
 		elseif ( !isset( $cat ) ) {
 			$backController = new BackController();
-			$result = $backController->addMessage( 'wrong', 'Merci de renseigner le type de réservation.' );
+			$result = $backController->addMessage( 'wrong-event', 'Merci de renseigner le type de réservation.' );
 			header( 'Location: index.php?action=reservations' );
 		}
 		elseif ( !isset( $nbperson ) || $nbperson > 10 ) {
 			$backController = new BackController();
-			$result = $backController->addMessage( 'wrong', 'Vous n\'avez pas choisi le nombre de personnes' );
+			$result = $backController->addMessage( 'wrong-event', 'Vous n\'avez pas choisi le nombre de personnes' );
 			header( 'Location: index.php?action=reservations' );
 		}
 		elseif ( empty( $comment ) && $cat == 'Autre' ) {
 			$backController = new BackController();
-			$result = $backController->addMessage( 'wrong', 'Vous avez sélectionné le choix autre, merci de préciser votre demande en commentaire.' );
+			$result = $backController->addMessage( 'wrong-event', 'Vous avez sélectionné le choix autre, merci de préciser votre demande en commentaire.' );
 			header( 'Location: index.php?action=reservations' );
 		}
 		else {
 			$eventmanager = new EventManager();
 			$addEvent = $eventmanager->newEvent( $name, $phone, $mail, $cat, $nbperson, $comment, $date );
 			$backController = new BackController();
-			$result = $backController->addMessage( 'success', 'Votre demande a bien été prise en compte.' );
+			$result = $backController->addMessage( 'success-event', 'Votre demande a bien été prise en compte.' );
 
-			require( 'view/frontend/reservation.php' );
+			require( 'View/Frontend/reservation.php' );
 		}
 
 	}
@@ -185,7 +185,7 @@ class BackController {
 		$eventmanager = new EventManager();
 		$events = $eventmanager->getEvents();
 
-		require('view/backend/adminReservation.php');
+		require('View/Backend/adminReservation.php');
 	}
 
 	public function deleteEvent($id)
@@ -211,7 +211,7 @@ class BackController {
 		$messageManager = new MessageManager();
 		$listComments = $messageManager->getMessage();
 
-		require('view/backend/toDo.php');
+		require('View/Backend/toDo.php');
 	}
 
 	public function delComment($id)

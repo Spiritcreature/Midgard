@@ -10,7 +10,7 @@ use Model\Backend\User;
 
 
 // Chargement des classes
-require_once('model/autoload.php');
+require_once('Model/Autoload.php');
 Autoloader::register();
 
 
@@ -20,29 +20,29 @@ class FrontController {
 		$messageManager = new MessageManager();
 		$listComments = $messageManager->getMessage();
 
-		require('view/frontend/welcome.php');
+		require('View/Frontend/welcome.php');
 	}
 
 	public function reservation(){
 
-		require('view/frontend/reservation.php');
+		require('View/Frontend/reservation.php');
 	}
 
 	public function drinks(){
 		$drinkmanager = new DrinkManager();
 		$allDrinks = $drinkmanager->getDrinks();
 
-		require('view/frontend/allDrinks.php');
+		require('View/Frontend/allDrinks.php');
 	}
 
 	public function contact(){
 
-		require('view/frontend/contact.php');
+		require('View/Frontend/contact.php');
 	}
 
 	public function auth(){
 
-		require('view/frontend/authentification.php');
+		require('View/Frontend/authentification.php');
 	}
 
 	public function login($login, $password){
@@ -73,13 +73,13 @@ class FrontController {
 			else{
 				header('Location: index.php?action=wrongUser');
 			}
-			require('view/frontend/authentification.php');
+			require('View/Frontend/authentification.php');
 		}
 	}
 
 	public function wrongUser(){
 
-		require('view/frontend/wrongUser.php');
+		require('View/Frontend/wrongUser.php');
 	}
 
 

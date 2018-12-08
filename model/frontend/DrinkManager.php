@@ -7,11 +7,11 @@ use Model\Frontend\Drink;
 use Model\Autoloader;
 use \PDO;
 
-require_once('model/autoload.php');
+require_once('Model/Autoload.php');
 Autoloader::register();
 
 
-class DrinkManager extends Database
+class DrinkManager extends \Database
 {
 	//affiche les boissons médiévales
 	public function getDrinks()

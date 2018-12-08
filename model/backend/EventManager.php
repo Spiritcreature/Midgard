@@ -7,12 +7,12 @@ use Model\Backend\Event;
 use Model\Autoloader;
 use \PDO;
 
-require_once('model/autoload.php');
+require_once('Model/Autoload.php');
 Autoloader::register();
 
 
 
-class EventManager extends Database
+class EventManager extends \Database
 {
 	// récupération de l'utilisateur et du mot de passe
 	public function newEvent($name, $phone, $mail, $cat, $nbperson, $comment, $date)

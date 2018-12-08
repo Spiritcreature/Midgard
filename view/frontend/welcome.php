@@ -85,5 +85,5 @@ if ( isset( $_SESSION[ 'pseudo' ] ) ) {
 <!-- POPUP ADMIN -->
 <?php
 	$content = ob_get_clean();
-	require('view/template.php');
+	require('View/template.php');
 ?>

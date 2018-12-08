@@ -261,13 +261,27 @@ legend{
 .popup-success-event{
 	animation: fadein 1s;
 	color: #000000;
-	height: 80px;
+	bottom: 120px;
+	left: 40%;
 	margin: 0 auto!important;
 	position: absolute;
 	border: 1px #FBFBFB solid;
 	border-radius: 6px;
 	background-color: #A8F08F;
 	z-index: 55!important;
+}
+
+.popup-wrong-event{
+	animation: fadein 1s;
+	color: #000000;
+	bottom: 120px;
+	left: 40%;
+	width: 300px;
+	position: absolute;
+	border: 1px #FBFBFB solid;
+	border-radius: 6px;
+	background-color: #BB2E31;
+	text-align: center;
 }
 
 .popup-nok-bottle{
