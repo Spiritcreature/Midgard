@@ -18,9 +18,9 @@
 					</div>
 				</div>			
 			</div>
-		</div>
-		<div class="col-xs-12 col-md-12">
+		<div class="col-12 col-md-12 font-facebook">
 			<div class="fb-comments" data-href="https://www.facebook.com/Midgard-534627433615465/" data-width="100%" data-numposts="5" data-colorscheme="dark"></div>
+		</div>
 		</div>
 	<?php
 

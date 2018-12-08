@@ -1,17 +1,17 @@
 <?php
 
-namespace Dizet\Midgard\Controller;
+namespace Controller;
 
-use Dizet\Midgard\Model\UserManager;
-use Dizet\Midgard\Model\DrinkManager;
-use Dizet\Midgard\Model\MessageManager;
-use Dizet\Midgard\Model\User;
+use Model\Backend\UserManager;
+use Model\Frontend\DrinkManager;
+use Model\Backend\MessageManager;
+use Model\Autoloader;
+use Model\Backend\User;
 
 
 // Chargement des classes
-require_once('model/backend/UserManager.php');
-require_once('model/frontend/DrinkManager.php');
-require_once('model/backend/MessageManager.php');
+require_once('model/autoload.php');
+Autoloader::register();
 
 
 class FrontController {

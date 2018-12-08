@@ -1,6 +1,6 @@
 <?php
 
-namespace Dizet\Midgard\Model;
+namespace Model;
 
 class Autoloader{
 
@@ -19,8 +19,7 @@ class Autoloader{
 		$class = str_replace(__NAMESPACE__  . '\\', '', $class);
 		$class = str_replace('\\', '/', $class);
 		
-		require 'Controller/' . $class . '.php';
-        require 'Model/' . $class . '.php';
+		require $class . '.php';
     }
 
 }

@@ -1,13 +1,14 @@
 <?php
 
-namespace Dizet\Midgard\Model;
+namespace Model\Backend;
 
-use \Dizet\Midgard\Model\Database;
-use \Dizet\Midgard\Model\User;
+use Model\Database;
+use Model\Backend\User;
+use Model\Autoloader;
 use \PDO;
 
-require_once('model/Database.php');
-require_once('model/backend/User.php');
+require_once('model/autoload.php');
+Autoloader::register();
 
 
 

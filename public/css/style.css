@@ -164,6 +164,7 @@ legend{
 	background-color: #585858;
 	border: 1px #000000 solid;
 	border-radius: 6px;
+	height: auto!important;
 }
 
 .test{

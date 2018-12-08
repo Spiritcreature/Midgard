@@ -1,16 +1,16 @@
 <?php
 
-namespace Dizet\Midgard\Controller;
+namespace Controller;
 
-use \Dizet\Midgard\model\DrinkManager;
-use \Dizet\Midgard\model\EventManager;
-use \Dizet\Midgard\model\MessageManager;
+use Model\Frontend\DrinkManager;
+use Model\Backend\EventManager;
+use Model\Backend\MessageManager;
+use Model\Autoloader;
 use \DateTime;
 
 // Chargement des classes
-require_once('model/frontend/DrinkManager.php');
-require_once('model/backend/EventManager.php');
-require_once('model/backend/MessageManager.php');
+require_once('model/autoload.php');
+Autoloader::register();
 
 
 class BackController {

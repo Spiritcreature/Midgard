@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  jeu. 06 déc. 2018 à 16:33
+-- Généré le :  sam. 08 déc. 2018 à 09:44
 -- Version du serveur :  5.7.21
 -- Version de PHP :  5.6.35
 
@@ -39,7 +39,14 @@ CREATE TABLE IF NOT EXISTS `events` (
   `comment` varchar(400) NOT NULL,
   `reservationDate` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=30 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=37 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `events`
+--
+
+INSERT INTO `events` (`id`, `name`, `email`, `phone`, `catEvent`, `nbPerson`, `comment`, `reservationDate`) VALUES
+(33, 'Dizet', 'mid@mid.fr', 600256585, 'Enterrement de vie de garçon / fille', 7, '', '19/12/2018');
 
 -- --------------------------------------------------------
 
@@ -84,7 +91,7 @@ CREATE TABLE IF NOT EXISTS `message` (
   `comment` varchar(255) NOT NULL,
   `creationDate` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `message`

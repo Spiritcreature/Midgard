@@ -1,10 +1,11 @@
 <?php
 session_start();
 
-use Dizet\Midgard\Controller\FrontController;
-use Dizet\Midgard\Controller\BackController;
-use Dizet\Midgard\Model\Autoloader;
+use Controller\FrontController;
+use Controller\BackController;
+use Model\Autoloader;
 
+require_once('model/autoload.php');
 Autoloader::register();
 
 

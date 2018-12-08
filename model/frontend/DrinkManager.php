@@ -1,13 +1,14 @@
 <?php
 
-namespace Dizet\Midgard\Model;
+namespace Model\Frontend;
 
-use \Dizet\Midgard\Model\Database;
-use \Dizet\Midgard\Model\Drink;
+use Model\Database;
+use Model\Frontend\Drink;
+use Model\Autoloader;
 use \PDO;
 
-require_once('model/Database.php');
-require_once('model/frontend/Drink.php');
+require_once('model/autoload.php');
+Autoloader::register();
 
 
 class DrinkManager extends Database

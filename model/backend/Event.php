@@ -1,6 +1,6 @@
 <?php
 
-namespace Dizet\Midgard\Model;
+namespace Model\Backend;
 
 class Event{
 	
