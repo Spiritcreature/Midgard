@@ -118,7 +118,7 @@ class BackController {
 
 			$drinksmanager = new DrinkManager();
 			$adding = $drinksmanager->insertDrink( $name, $description, $image, $type );
-			$destination = 'public/img/' . $image;
+			$destination = 'Public/img/' . $image;
 			move_uploaded_file($tmp, $destination);
 
 			$backController = new BackController();
@@ -226,7 +226,7 @@ class BackController {
 		$eventmanager = new EventManager();
 		$mEvent = $eventmanager->selectModifEvent($id);
 
-		require('view/backend/modifyEvent.php');
+		require('View/Backend/modifyEvent.php');
 	}
 
 

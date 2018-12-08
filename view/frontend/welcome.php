@@ -51,8 +51,9 @@ if ( isset( $_SESSION[ 'pseudo' ] ) ) {
 				</div>
 				<div class="col-md-12 text-center">
 					<div class="animate four">
-						<span>B</span><span>i</span><span>e</span><span>n</span><span>v</span><span>e</span><span>n</span><span>u</span><span>e</span> &nbsp;
-						<span>a</span><span>d</span><span>m</span><span>i</span><span>n</span><span>i</span><span>s</span><span>t</span><span>r</span><span>a</span><span>t</span><span>e</span><span>u</span><span>r</span><span>.</span>
+						<div class="br"><p></div><span>B</span><span>i</span><span>e</span><span>n</span><span>v</span><span>e</span><span>n</span><span>u</span><span>e</span><div class="br"></p></div>
+						<div class="br"><p></div><span>a</span><span>d</span><span>m</span><span>i</span><span>n</span><span>i</span><span>s</span><span>t</span><span>r</span><span>a</span><span>t</span><span>e</span><span>u</span><span>r</span><span>.</span>
+						<div class="br"></p></div>
 					</div>
 				</div>
 			</div>
